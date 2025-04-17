@@ -1,0 +1,10 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#2980B9"/>
+  <rect x="100" y="100" width="600" height="200" rx="20" fill="#ECF0F1"/>
+  <rect x="150" y="150" width="200" height="100" rx="10" fill="#3498DB"/>
+  <rect x="400" y="150" width="250" height="100" rx="10" fill="#3498DB"/>
+  <circle cx="250" cy="200" r="40" fill="#ECF0F1"/>
+  <circle cx="525" cy="200" r="40" fill="#ECF0F1"/>
+  <path d="M150,150 Q400,50 650,150" stroke="#E74C3C" stroke-width="10" fill="none"/>
+  <text x="400" y="80" font-family="Arial" font-size="30" text-anchor="middle" fill="white">Insurance Claim Process</text>
+</svg>

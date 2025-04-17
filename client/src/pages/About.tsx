@@ -47,7 +47,7 @@ const About = () => {
               <div className="order-1 md:order-2">
                 <div className="relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1639846160299-83e4be935bad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                    src="/images/about-hero.svg" 
                     alt="Banadir Auto Body Shop facility" 
                     className="w-full h-auto rounded-lg shadow-xl"
                   />
@@ -117,7 +117,7 @@ const About = () => {
               <div className="bg-[#F9F9F9] rounded-lg overflow-hidden">
                 <div className="h-64 bg-gray-300 relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                    src="/images/team-owner.svg" 
                     alt="Ahmed Hassan, Owner" 
                     className="w-full h-full object-cover"
                   />
@@ -134,7 +134,7 @@ const About = () => {
               <div className="bg-[#F9F9F9] rounded-lg overflow-hidden">
                 <div className="h-64 bg-gray-300 relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                    src="/images/team-manager.svg" 
                     alt="Sarah Johnson, Service Manager" 
                     className="w-full h-full object-cover"
                   />
@@ -151,7 +151,7 @@ const About = () => {
               <div className="bg-[#F9F9F9] rounded-lg overflow-hidden">
                 <div className="h-64 bg-gray-300 relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1615515057329-5af40ec902b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                    src="/images/team-technician.svg" 
                     alt="Michael Rodriguez, Lead Technician" 
                     className="w-full h-full object-cover"
                   />

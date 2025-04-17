@@ -52,7 +52,7 @@ const Insurance = () => {
               
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                  src="/images/insurance-image.svg" 
                   alt="Insurance claim process" 
                   className="rounded-lg shadow-xl mb-8"
                 />

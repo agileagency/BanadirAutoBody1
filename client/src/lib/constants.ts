@@ -19,42 +19,42 @@ export const SERVICES = [
     name: "Collision Repair",
     description: "Expert collision repair services to restore your vehicle to pre-accident condition with precision and care.",
     icon: "fa-car-crash",
-    image: "https://images.unsplash.com/photo-1599256872237-5dcc0fbe9668?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/collision-repair.svg"
   },
   {
     id: "paint",
     name: "Paint Services",
     description: "Professional painting services using premium materials for a flawless finish that matches your vehicle perfectly.",
     icon: "fa-spray-can",
-    image: "https://images.unsplash.com/photo-1617886322168-72b886573c5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/paint-services.svg"
   },
   {
     id: "frame",
     name: "Frame Straightening",
     description: "Advanced frame straightening technology to restore your vehicle's structural integrity after an accident.",
     icon: "fa-cogs",
-    image: "https://images.unsplash.com/photo-1599255068390-206e0d068539?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/frame-straightening.svg"
   },
   {
     id: "dent",
     name: "Dent Repair",
     description: "Paintless dent repair and traditional dent removal services to make your vehicle look new again.",
     icon: "fa-hammer",
-    image: "https://images.unsplash.com/photo-1572876086600-54e36428cae9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/dent-repair.svg"
   },
   {
     id: "glass",
     name: "Auto Glass",
     description: "Expert windshield and auto glass repair and replacement services for all vehicle makes and models.",
     icon: "fa-window-restore",
-    image: "https://images.unsplash.com/photo-1635943913179-43ddfa7ac70f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/auto-glass.svg"
   },
   {
     id: "detailing",
     name: "Detailing Services",
     description: "Premium detailing services to restore your vehicle's appearance inside and out after repairs.",
     icon: "fa-car",
-    image: "https://images.unsplash.com/photo-1619373476475-15929fa3a83b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/detailing.svg"
   }
 ];
 
@@ -98,37 +98,37 @@ export const GALLERY_ITEMS = [
     id: 1,
     title: "Collision Repair",
     description: "Complete restoration after a front-end collision",
-    image: "https://images.unsplash.com/photo-1617469767053-d3b523a0b982?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/gallery-1.svg"
   },
   {
     id: 2,
     title: "Custom Paint",
     description: "Premium metallic finish with perfect color match",
-    image: "https://images.unsplash.com/photo-1622464349609-e4ea3445e381?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/gallery-2.svg"
   },
   {
     id: 3,
     title: "Frame Restoration",
     description: "Structural repairs with precision alignment",
-    image: "https://images.unsplash.com/photo-1664455340023-214c33a9b0e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/gallery-3.svg"
   },
   {
     id: 4,
     title: "Fender Repair",
     description: "Seamless fender replacement with perfect color match",
-    image: "https://images.unsplash.com/photo-1621415814107-1145ca138ad4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/gallery-4.svg"
   },
   {
     id: 5,
     title: "Interior Restoration",
     description: "Complete interior detailing and restoration",
-    image: "https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/gallery-5.svg"
   },
   {
     id: 6,
     title: "Glass Replacement",
     description: "Professional windshield and window installation",
-    image: "https://images.unsplash.com/photo-1580838113262-8b4b34c4d0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+    image: "/images/gallery-6.svg"
   }
 ];
 
@@ -139,7 +139,7 @@ export const TESTIMONIALS = [
     content: "After my accident, I was devastated about the damage to my car. Banadir Auto Body Shop not only restored my vehicle to its original condition, but they made the entire insurance process stress-free. Their attention to detail is impressive!",
     author: "Sarah Johnson",
     location: "Minneapolis, MN",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image: "/images/testimonial-1.svg",
     rating: 5
   },
   {
@@ -147,7 +147,7 @@ export const TESTIMONIALS = [
     content: "I've been taking my vehicles to Banadir for years and have always received exceptional service. Their technicians are knowledgeable, friendly, and they stand behind their work. I wouldn't trust my car with anyone else.",
     author: "Michael Stevenson",
     location: "St. Paul, MN",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: "/images/testimonial-2.svg",
     rating: 5
   },
   {
@@ -155,7 +155,7 @@ export const TESTIMONIALS = [
     content: "When my SUV was damaged in a hail storm, Banadir worked directly with my insurance company and made the entire process seamless. The quality of work exceeded my expectations and they finished ahead of schedule!",
     author: "Jennifer Williams",
     location: "Eden Prairie, MN",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    image: "/images/testimonial-3.svg",
     rating: 5
   }
 ];

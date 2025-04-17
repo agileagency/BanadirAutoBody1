@@ -1,10 +1,71 @@
 <svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#2980B9"/>
-  <rect x="100" y="100" width="600" height="200" rx="20" fill="#ECF0F1"/>
-  <rect x="150" y="150" width="200" height="100" rx="10" fill="#3498DB"/>
-  <rect x="400" y="150" width="250" height="100" rx="10" fill="#3498DB"/>
-  <circle cx="250" cy="200" r="40" fill="#ECF0F1"/>
-  <circle cx="525" cy="200" r="40" fill="#ECF0F1"/>
-  <path d="M150,150 Q400,50 650,150" stroke="#E74C3C" stroke-width="10" fill="none"/>
-  <text x="400" y="80" font-family="Arial" font-size="30" text-anchor="middle" fill="white">Insurance Claim Process</text>
+  <rect width="100%" height="100%" fill="#2C3E50"/>
+  
+  <!-- Process flow background -->
+  <rect x="50" y="150" width="700" height="100" rx="10" fill="#ECF0F1"/>
+  
+  <!-- Car silhouette with damage -->
+  <path d="M80,200 L120,180 L140,170 L180,170 L200,180 L210,200 L80,200" fill="#E74C3C"/>
+  <circle cx="100" cy="200" r="15" fill="#34495E"/>
+  <circle cx="190" cy="200" r="15" fill="#34495E"/>
+  <path d="M120,170 L130,150 L160,150 L170,170" fill="#ECF0F1"/>
+  <path d="M140,170 L130,190" stroke="#34495E" stroke-width="3"/>
+  
+  <!-- Insurance document -->
+  <rect x="240" y="160" width="70" height="80" fill="white" stroke="#BDC3C7" stroke-width="2"/>
+  <rect x="250" y="170" width="50" height="10" fill="#BDC3C7"/>
+  <rect x="250" y="185" width="50" height="5" fill="#BDC3C7"/>
+  <rect x="250" y="195" width="50" height="5" fill="#BDC3C7"/>
+  <rect x="250" y="205" width="30" height="5" fill="#BDC3C7"/>
+  <rect x="250" y="225" width="40" height="10" fill="#3498DB"/>
+  
+  <!-- Mechanic with tool -->
+  <circle cx="380" cy="180" r="20" fill="#ECF0F1"/>
+  <path d="M370,180 L390,180 Z" stroke="#2C3E50" stroke-width="2"/>
+  <path d="M380,200 L380,230" stroke="#27AE60" stroke-width="10"/>
+  <path d="M370,215 L390,215" stroke="#27AE60" stroke-width="3"/>
+  <path d="M360,220 L350,210 L355,205 L365,215" fill="#BDC3C7"/>
+  
+  <!-- Car being repaired -->
+  <path d="M460,200 L500,180 L520,170 L560,170 L580,180 L590,200 L460,200" fill="#3498DB"/>
+  <circle cx="480" cy="200" r="15" fill="#34495E"/>
+  <circle cx="570" cy="200" r="15" fill="#34495E"/>
+  <path d="M500,170 L510,150 L540,150 L550,170" fill="#ECF0F1"/>
+  
+  <!-- Completed/Approved checkmark -->
+  <circle cx="670" cy="190" r="30" fill="#27AE60"/>
+  <path d="M650,190 L665,205 L690,175" stroke="white" stroke-width="5" fill="none"/>
+  
+  <!-- Process flow arrows -->
+  <path d="M210,190 L240,190" stroke="#7F8C8D" stroke-width="3" fill="none"/>
+  <polygon points="235,185 245,190 235,195" fill="#7F8C8D"/>
+  
+  <path d="M310,190 L360,190" stroke="#7F8C8D" stroke-width="3" fill="none"/>
+  <polygon points="355,185 365,190 355,195" fill="#7F8C8D"/>
+  
+  <path d="M400,190 L460,190" stroke="#7F8C8D" stroke-width="3" fill="none"/>
+  <polygon points="455,185 465,190 455,195" fill="#7F8C8D"/>
+  
+  <path d="M590,190 L640,190" stroke="#7F8C8D" stroke-width="3" fill="none"/>
+  <polygon points="635,185 645,190 635,195" fill="#7F8C8D"/>
+  
+  <!-- Process labels -->
+  <text x="145" y="240" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">DAMAGE</text>
+  <text x="145" y="255" font-family="Arial" font-size="12" text-anchor="middle" fill="white">ASSESSMENT</text>
+  
+  <text x="275" y="240" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">INSURANCE</text>
+  <text x="275" y="255" font-family="Arial" font-size="12" text-anchor="middle" fill="white">APPROVAL</text>
+  
+  <text x="380" y="240" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">REPAIR</text>
+  <text x="380" y="255" font-family="Arial" font-size="12" text-anchor="middle" fill="white">PROCESS</text>
+  
+  <text x="525" y="240" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">QUALITY</text>
+  <text x="525" y="255" font-family="Arial" font-size="12" text-anchor="middle" fill="white">CHECK</text>
+  
+  <text x="670" y="240" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">RETURN</text>
+  <text x="670" y="255" font-family="Arial" font-size="12" text-anchor="middle" fill="white">VEHICLE</text>
+  
+  <!-- Title -->
+  <text x="400" y="100" font-family="Arial" font-size="30" font-weight="bold" text-anchor="middle" fill="white">INSURANCE CLAIM PROCESS</text>
+  <text x="400" y="130" font-family="Arial" font-size="16" text-anchor="middle" fill="#3498DB">We work with ALL insurance companies</text>
 </svg>

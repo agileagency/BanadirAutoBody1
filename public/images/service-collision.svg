@@ -1,0 +1,31 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="#E74C3C"/>
+  <circle cx="100" cy="100" r="85" fill="#ECF0F1"/>
+  
+  <!-- Damaged Car Shape -->
+  <path d="M50,120 L65,100 L85,90 L120,90 L135,100 L150,120 Z" fill="#3498DB"/>
+  
+  <!-- Car details -->
+  <line x1="85" y1="90" x2="65" y2="100" stroke="#2C3E50" stroke-width="2"/>
+  <line x1="120" y1="90" x2="135" y2="100" stroke="#2C3E50" stroke-width="2"/>
+  <rect x="95" y="90" width="15" height="20" fill="#2C3E50"/>
+  
+  <!-- Car wheels -->
+  <circle cx="75" cy="120" r="10" fill="#2C3E50"/>
+  <circle cx="125" cy="120" r="10" fill="#2C3E50"/>
+  
+  <!-- Collision/Impact Effect -->
+  <path d="M140,75 L150,60 L165,90 L180,65 L170,105 L150,100" fill="#E74C3C" stroke="#C0392B" stroke-width="2"/>
+  
+  <!-- Damage Symbol -->
+  <path d="M160,85 L170,95 M165,80 L175,100" stroke="#C0392B" stroke-width="4"/>
+  
+  <!-- Wrench Tool -->
+  <path d="M30,80 L70,115 L60,125 L20,90 Z" fill="#7F8C8D" stroke="#2C3E50" stroke-width="2"/>
+  <circle cx="25" cy="85" r="8" fill="#7F8C8D" stroke="#2C3E50" stroke-width="2"/>
+  
+  <!-- Service Label -->
+  <rect x="40" y="140" width="120" height="30" rx="5" fill="#E74C3C"/>
+  <text x="100" y="160" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">COLLISION REPAIR</text>
+</svg>

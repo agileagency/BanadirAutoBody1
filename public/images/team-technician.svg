@@ -1,8 +1,26 @@
 <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#2C3E50"/>
-  <circle cx="300" cy="150" r="80" fill="#ECF0F1"/>
-  <circle cx="300" cy="120" r="30" fill="#2C3E50"/>
-  <rect x="250" y="160" width="100" height="60" rx="5" fill="#2C3E50"/>
-  <text x="300" y="250" font-family="Arial" font-size="24" text-anchor="middle" fill="#ECF0F1">Michael Rodriguez</text>
-  <text x="300" y="280" font-family="Arial" font-size="18" text-anchor="middle" fill="#D4AF37">Lead Technician</text>
+  
+  <!-- Person silhouette -->
+  <circle cx="300" cy="150" r="90" fill="#ECF0F1"/>
+  <path d="M270,120 L330,120 L320,90 L280,90 Z" fill="#2C3E50"/>
+  <path d="M290,160 A10,10 0 0,1 310,160" stroke="#2C3E50" stroke-width="3" fill="none"/>
+  
+  <!-- Body shape -->
+  <path d="M240,210 C240,270 360,270 360,210 L320,150 L280,150 Z" fill="#27AE60"/>
+  
+  <!-- Auto painting spray gun -->
+  <path d="M220,180 L180,150 L190,140 L230,170 Z" fill="#BDC3C7" stroke="#7F8C8D" stroke-width="2"/>
+  <rect x="230" y="170" width="20" height="10" fill="#BDC3C7" stroke="#7F8C8D" stroke-width="1"/>
+  <path d="M180,150 L160,140" stroke="#7F8C8D" stroke-width="2" fill="none"/>
+  
+  <!-- Name and title -->
+  <rect x="150" y="320" width="300" height="60" rx="10" fill="#D4AF37"/>
+  <text x="300" y="345" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle" fill="#2C3E50">Michael Rodriguez</text>
+  <text x="300" y="370" font-family="Arial" font-size="16" text-anchor="middle" fill="#2C3E50">Lead Technician</text>
+  
+  <!-- Expertise badge -->
+  <circle cx="450" cy="100" r="40" fill="#27AE60"/>
+  <text x="450" y="90" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">15+ YRS</text>
+  <text x="450" y="110" font-family="Arial" font-size="12" text-anchor="middle" fill="white">EXPERT</text>
 </svg>

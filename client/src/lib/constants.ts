@@ -98,37 +98,37 @@ export const GALLERY_ITEMS = [
     id: 1,
     title: "Collision Repair",
     description: "Complete restoration after a front-end collision",
-    image: "/images/gallery-1.svg"
+    image: "/images/photos/collision-repair.jpg"
   },
   {
     id: 2,
     title: "Custom Paint",
     description: "Premium metallic finish with perfect color match",
-    image: "/images/gallery-2.svg"
+    image: "/images/photos/custom-paint.jpg"
   },
   {
     id: 3,
     title: "Frame Restoration",
     description: "Structural repairs with precision alignment",
-    image: "/images/gallery-3.svg"
+    image: "/images/photos/frame-restoration.jpg"
   },
   {
     id: 4,
     title: "Fender Repair",
     description: "Seamless fender replacement with perfect color match",
-    image: "/images/gallery-4.svg"
+    image: "/images/photos/fender-repair.jpg"
   },
   {
     id: 5,
     title: "Interior Restoration",
     description: "Complete interior detailing and restoration",
-    image: "/images/gallery-5.svg"
+    image: "/images/photos/interior-restoration.jpg"
   },
   {
     id: 6,
     title: "Glass Replacement",
     description: "Professional windshield and window installation",
-    image: "/images/gallery-6.svg"
+    image: "/images/photos/glass-replacement.jpg"
   }
 ];
 

@@ -139,7 +139,7 @@ export const TESTIMONIALS = [
     content: "After my accident, I was devastated about the damage to my car. Banadir Auto Body Shop not only restored my vehicle to its original condition, but they made the entire insurance process stress-free. Their attention to detail is impressive!",
     author: "Sarah Johnson",
     location: "Minneapolis, MN",
-    image: "/images/testimonial-1.svg",
+    image: "/images/photos/testimonial-1.jpg",
     rating: 5
   },
   {
@@ -147,7 +147,7 @@ export const TESTIMONIALS = [
     content: "I've been taking my vehicles to Banadir for years and have always received exceptional service. Their technicians are knowledgeable, friendly, and they stand behind their work. I wouldn't trust my car with anyone else.",
     author: "Michael Stevenson",
     location: "St. Paul, MN",
-    image: "/images/testimonial-2.svg",
+    image: "/images/photos/testimonial-2.jpg",
     rating: 5
   },
   {
@@ -155,7 +155,7 @@ export const TESTIMONIALS = [
     content: "When my SUV was damaged in a hail storm, Banadir worked directly with my insurance company and made the entire process seamless. The quality of work exceeded my expectations and they finished ahead of schedule!",
     author: "Jennifer Williams",
     location: "Eden Prairie, MN",
-    image: "/images/testimonial-3.svg",
+    image: "/images/photos/testimonial-3.jpg",
     rating: 5
   }
 ];

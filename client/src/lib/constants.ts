@@ -19,42 +19,42 @@ export const SERVICES = [
     name: "Collision Repair",
     description: "Expert collision repair services to restore your vehicle to pre-accident condition with precision and care.",
     icon: "fa-car-crash",
-    image: "/images/collision-repair.svg"
+    image: "/images/photos/service-collision.jpg"
   },
   {
     id: "paint",
     name: "Paint Services",
     description: "Professional painting services using premium materials for a flawless finish that matches your vehicle perfectly.",
     icon: "fa-spray-can",
-    image: "/images/paint-services.svg"
+    image: "/images/photos/service-painting.jpg"
   },
   {
     id: "frame",
     name: "Frame Straightening",
     description: "Advanced frame straightening technology to restore your vehicle's structural integrity after an accident.",
     icon: "fa-cogs",
-    image: "/images/frame-straightening.svg"
+    image: "/images/photos/service-frame.jpg"
   },
   {
     id: "dent",
     name: "Dent Repair",
     description: "Paintless dent repair and traditional dent removal services to make your vehicle look new again.",
     icon: "fa-hammer",
-    image: "/images/dent-repair.svg"
+    image: "/images/photos/service-dent.jpg"
   },
   {
     id: "glass",
     name: "Auto Glass",
     description: "Expert windshield and auto glass repair and replacement services for all vehicle makes and models.",
     icon: "fa-window-restore",
-    image: "/images/auto-glass.svg"
+    image: "/images/photos/glass-replacement.jpg"
   },
   {
     id: "detailing",
     name: "Detailing Services",
     description: "Premium detailing services to restore your vehicle's appearance inside and out after repairs.",
     icon: "fa-car",
-    image: "/images/detailing.svg"
+    image: "/images/photos/service-restoration.jpg"
   }
 ];
 

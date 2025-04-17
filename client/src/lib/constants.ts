@@ -19,42 +19,42 @@ export const SERVICES = [
     name: "Collision Repair",
     description: "Expert collision repair services to restore your vehicle to pre-accident condition with precision and care.",
     icon: "fa-car-crash",
-    image: "/images/photos/service-collision.jpg"
+    image: "https://images.unsplash.com/photo-1625834254755-f0b7e4bdf0d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyJTIwY29sbGlzaW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=80"
   },
   {
     id: "paint",
     name: "Paint Services",
     description: "Professional painting services using premium materials for a flawless finish that matches your vehicle perfectly.",
     icon: "fa-spray-can",
-    image: "/images/photos/service-painting.jpg"
+    image: "https://images.unsplash.com/photo-1622467827417-bbe2237067a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FyJTIwcGFpbnRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=80"
   },
   {
     id: "frame",
     name: "Frame Straightening",
     description: "Advanced frame straightening technology to restore your vehicle's structural integrity after an accident.",
     icon: "fa-cogs",
-    image: "/images/photos/service-frame.jpg"
+    image: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FyJTIwZnJhbWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=80"
   },
   {
     id: "dent",
     name: "Dent Repair",
     description: "Paintless dent repair and traditional dent removal services to make your vehicle look new again.",
     icon: "fa-hammer",
-    image: "/images/photos/service-dent.jpg"
+    image: "https://images.unsplash.com/photo-1620395355811-b52b6efc9716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FyJTIwZGVudHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=80"
   },
   {
     id: "glass",
     name: "Auto Glass",
     description: "Expert windshield and auto glass repair and replacement services for all vehicle makes and models.",
     icon: "fa-window-restore",
-    image: "/images/photos/glass-replacement.jpg"
+    image: "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2luZHNoaWVsZCUyMHJlcGxhY2VtZW50fGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=80"
   },
   {
     id: "detailing",
     name: "Detailing Services",
     description: "Premium detailing services to restore your vehicle's appearance inside and out after repairs.",
     icon: "fa-car",
-    image: "/images/photos/service-restoration.jpg"
+    image: "https://images.unsplash.com/photo-1581289789902-ab81bc594566?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyJTIwcmVzdG9yYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=80"
   }
 ];
 
@@ -98,37 +98,37 @@ export const GALLERY_ITEMS = [
     id: 1,
     title: "Collision Repair",
     description: "Complete restoration after a front-end collision",
-    image: "/images/photos/collision-repair.jpg"
+    image: "https://images.unsplash.com/photo-1623013438264-d176fb91ee99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyJTIwY29sbGlzaW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 2,
     title: "Custom Paint",
     description: "Premium metallic finish with perfect color match",
-    image: "/images/photos/custom-paint.jpg"
+    image: "https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhciUyMHBhaW50fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 3,
     title: "Frame Restoration",
     description: "Structural repairs with precision alignment",
-    image: "/images/photos/frame-restoration.jpg"
+    image: "https://images.unsplash.com/photo-1592833167866-45229fead2ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyJTIwZnJhbWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 4,
     title: "Fender Repair",
     description: "Seamless fender replacement with perfect color match",
-    image: "/images/photos/fender-repair.jpg"
+    image: "https://images.unsplash.com/photo-1580273427483-115a8a4a8d5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyJTIwZmVuZGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 5,
     title: "Interior Restoration",
     description: "Complete interior detailing and restoration",
-    image: "/images/photos/interior-restoration.jpg"
+    image: "https://images.unsplash.com/photo-1606577924006-27d39b132ae2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FyJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 6,
     title: "Glass Replacement",
     description: "Professional windshield and window installation",
-    image: "/images/photos/glass-replacement.jpg"
+    image: "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2luZHNoaWVsZCUyMHJlcGxhY2VtZW50fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=80"
   }
 ];
 
@@ -139,7 +139,7 @@ export const TESTIMONIALS = [
     content: "After my accident, I was devastated about the damage to my car. Banadir Auto Body Shop not only restored my vehicle to its original condition, but they made the entire insurance process stress-free. Their attention to detail is impressive!",
     author: "Sarah Johnson",
     location: "Minneapolis, MN",
-    image: "/images/photos/testimonial-1.jpg",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=80",
     rating: 5
   },
   {
@@ -147,7 +147,7 @@ export const TESTIMONIALS = [
     content: "I've been taking my vehicles to Banadir for years and have always received exceptional service. Their technicians are knowledgeable, friendly, and they stand behind their work. I wouldn't trust my car with anyone else.",
     author: "Michael Stevenson",
     location: "St. Paul, MN",
-    image: "/images/photos/testimonial-2.jpg",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwcG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=80",
     rating: 5
   },
   {
@@ -155,7 +155,7 @@ export const TESTIMONIALS = [
     content: "When my SUV was damaged in a hail storm, Banadir worked directly with my insurance company and made the entire process seamless. The quality of work exceeded my expectations and they finished ahead of schedule!",
     author: "Jennifer Williams",
     location: "Eden Prairie, MN",
-    image: "/images/photos/testimonial-3.jpg",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29tYW4lMjBwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=80",
     rating: 5
   }
 ];

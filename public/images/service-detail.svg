@@ -1,0 +1,35 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="#F39C12"/>
+  <circle cx="100" cy="100" r="85" fill="#ECF0F1"/>
+  
+  <!-- Car silhouette -->
+  <path d="M40,120 L60,100 L80,90 L120,90 L140,100 L160,120 Z" fill="#C0392B"/>
+  
+  <!-- Car Windows -->
+  <path d="M85,90 L95,70 L105,70 L115,90 Z" fill="#3498DB" fill-opacity="0.6"/>
+  
+  <!-- Car Wheels -->
+  <circle cx="70" cy="120" r="10" fill="#34495E"/>
+  <circle cx="130" cy="120" r="10" fill="#34495E"/>
+  
+  <!-- Polisher/Buffer Tool -->
+  <circle cx="150" cy="70" r="15" fill="#BDC3C7" stroke="#7F8C8D" stroke-width="2"/>
+  <line x1="150" y1="70" x2="150" y2="40" stroke="#7F8C8D" stroke-width="3"/>
+  <path d="M140,40 L160,40 L155,30 L145,30 Z" fill="#7F8C8D"/>
+  
+  <!-- Cleaning Spray -->
+  <path d="M50,70 L55,65 L45,55 L40,60 Z" fill="#3498DB"/>
+  <rect x="45" y="70" width="10" height="15" fill="#3498DB"/>
+  <path d="M55,75 L65,73 L70,77 L65,80" stroke="#3498DB" stroke-width="2" fill="none"/>
+  <path d="M55,80 L63,83 L65,88" stroke="#3498DB" stroke-width="2" fill="none"/>
+  
+  <!-- Shine Effect -->
+  <path d="M90,60 L95,55 M110,60 L115,55 M100,50 L100,45" stroke="yellow" stroke-width="2"/>
+  <path d="M60,100 L55,95 M70,95 L65,90" stroke="yellow" stroke-width="2"/>
+  <path d="M140,100 L145,95 M130,95 L135,90" stroke="yellow" stroke-width="2"/>
+  
+  <!-- Service Label -->
+  <rect x="40" y="140" width="120" height="30" rx="5" fill="#F39C12"/>
+  <text x="100" y="160" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">DETAIL SERVICES</text>
+</svg>

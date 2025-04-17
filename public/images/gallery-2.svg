@@ -1,6 +1,60 @@
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#16A085"/>
-  <rect x="150" y="100" width="300" height="200" rx="10" fill="#1ABC9C"/>
-  <rect x="175" y="125" width="250" height="150" rx="5" fill="#ECF0F1"/>
-  <text x="300" y="200" font-family="Arial" font-size="24" text-anchor="middle" fill="#2C3E50">Custom Paint</text>
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background - Car Painting Area -->
+  <rect width="100%" height="100%" fill="#2C3E50"/>
+  
+  <!-- Painting Booth Walls -->
+  <rect x="20" y="50" width="360" height="200" fill="#ECF0F1"/>
+  <line x1="20" y1="50" x2="380" y2="50" stroke="#BDC3C7" stroke-width="3"/>
+  <line x1="20" y1="250" x2="380" y2="250" stroke="#BDC3C7" stroke-width="3"/>
+  <line x1="20" y1="50" x2="20" y2="250" stroke="#BDC3C7" stroke-width="3"/>
+  <line x1="380" y1="50" x2="380" y2="250" stroke="#BDC3C7" stroke-width="3"/>
+  
+  <!-- Painting Booth Floor -->
+  <rect x="20" y="250" width="360" height="50" fill="#95A5A6"/>
+  <line x1="70" y1="250" x2="70" y2="300" stroke="#7F8C8D" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="120" y1="250" x2="120" y2="300" stroke="#7F8C8D" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="170" y1="250" x2="170" y2="300" stroke="#7F8C8D" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="220" y1="250" x2="220" y2="300" stroke="#7F8C8D" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="270" y1="250" x2="270" y2="300" stroke="#7F8C8D" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="320" y1="250" x2="320" y2="300" stroke="#7F8C8D" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Car Being Painted -->
+  <path d="M80,210 L110,180 L290,180 L320,210 Z" fill="#C0392B"/>
+  <path d="M120,180 L150,140 L250,140 L280,180 Z" fill="#C0392B"/>
+  <rect x="150" y="140" width="100" height="40" fill="#C0392B"/>
+  <circle cx="120" cy="210" r="20" fill="#34495E"/>
+  <circle cx="280" cy="210" r="20" fill="#34495E"/>
+  <circle cx="120" cy="210" r="10" fill="#7F8C8D"/>
+  <circle cx="280" cy="210" r="10" fill="#7F8C8D"/>
+  
+  <!-- Car Windows -->
+  <path d="M150,140 L160,120 L240,120 L250,140 Z" fill="#3498DB" fill-opacity="0.7"/>
+  <rect x="160" y="140" width="20" height="30" fill="#3498DB" fill-opacity="0.7"/>
+  <rect x="220" y="140" width="20" height="30" fill="#3498DB" fill-opacity="0.7"/>
+  
+  <!-- Paint Sprayer in Action -->
+  <circle cx="50" cy="160" r="15" fill="#ECF0F1"/>  <!-- Head -->
+  <rect x="45" y="175" width="10" height="30" fill="#2980B9"/>  <!-- Body -->
+  <path d="M55,185 L80,165" stroke="#ECF0F1" stroke-width="3"/>  <!-- Arm -->
+  <rect x="40" y="205" width="20" height="45" fill="#2980B9"/>  <!-- Legs -->
+  
+  <!-- Paint Spray Gun -->
+  <rect x="75" y="160" width="20" height="10" fill="#7F8C8D"/>
+  <rect x="95" y="162" width="10" height="6" fill="#7F8C8D"/>
+  
+  <!-- Paint Spray -->
+  <path d="M105,165 Q125,160 145,170 Q125,175 105,165" fill="#E74C3C" fill-opacity="0.6"/>
+  <path d="M105,165 Q130,170 135,185 Q115,175 105,165" fill="#E74C3C" fill-opacity="0.6"/>
+  <path d="M105,165 Q135,155 140,145 Q115,160 105,165" fill="#E74C3C" fill-opacity="0.6"/>
+  
+  <!-- Ventilation System -->
+  <rect x="150" y="30" width="100" height="20" fill="#7F8C8D"/>
+  <rect x="160" y="35" width="80" height="10" fill="#95A5A6"/>
+  <path d="M150,30 L150,10 L250,10 L250,30" stroke="#7F8C8D" stroke-width="2" fill="none"/>
+  
+  <!-- Paint Containers -->
+  <rect x="330" y="200" width="30" height="40" fill="#E74C3C"/>
+  <rect x="335" y="195" width="20" height="5" fill="#7F8C8D"/>
+  <rect x="330" y="160" width="30" height="30" fill="#3498DB"/>
+  <rect x="335" y="155" width="20" height="5" fill="#7F8C8D"/>
 </svg>

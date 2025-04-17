@@ -1,6 +1,60 @@
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#34495E"/>
-  <rect x="150" y="100" width="300" height="200" rx="10" fill="#2C3E50"/>
-  <rect x="175" y="125" width="250" height="150" rx="5" fill="#E74C3C"/>
-  <text x="300" y="200" font-family="Arial" font-size="24" text-anchor="middle" fill="white">Collision Repair</text>
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background - Auto Shop Interior -->
+  <rect width="100%" height="100%" fill="#2C3E50"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="220" width="400" height="80" fill="#7F8C8D"/>
+  <line x1="0" y1="220" x2="400" y2="220" stroke="#95A5A6" stroke-width="2"/>
+  <line x1="50" y1="220" x2="50" y2="300" stroke="#95A5A6" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="150" y1="220" x2="150" y2="300" stroke="#95A5A6" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="250" y1="220" x2="250" y2="300" stroke="#95A5A6" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="350" y1="220" x2="350" y2="300" stroke="#95A5A6" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Car Lift with Vehicle -->
+  <rect x="100" y="200" width="200" height="20" fill="#E74C3C"/>
+  <rect x="110" y="190" width="180" height="10" fill="#C0392B"/>
+  
+  <!-- Car on Lift -->
+  <rect x="120" y="130" width="160" height="60" rx="20" fill="#3498DB"/>
+  <rect x="140" y="150" width="40" height="30" fill="#2980B9"/>
+  <rect x="220" y="150" width="40" height="30" fill="#2980B9"/>
+  <rect x="150" y="110" width="100" height="40" rx="10" fill="#3498DB"/>
+  <rect x="160" y="120" width="80" height="20" fill="#ECF0F1"/>
+  
+  <!-- Lift Posts -->
+  <rect x="100" y="200" width="20" height="100" fill="#BDC3C7"/>
+  <rect x="280" y="200" width="20" height="100" fill="#BDC3C7"/>
+  
+  <!-- Mechanic Working -->
+  <circle cx="50" cy="180" r="20" fill="#ECF0F1"/>  <!-- Head -->
+  <rect x="40" y="200" width="20" height="40" fill="#E74C3C"/>  <!-- Body -->
+  <rect x="25" y="210" width="15" height="10" fill="#ECF0F1"/>  <!-- Arm -->
+  <rect x="60" y="210" width="15" height="10" fill="#ECF0F1"/>  <!-- Arm -->
+  <rect x="40" y="240" width="10" height="30" fill="#34495E"/>  <!-- Leg -->
+  <rect x="50" y="240" width="10" height="30" fill="#34495E"/>  <!-- Leg -->
+  
+  <!-- Tool Box -->
+  <rect x="320" y="230" width="50" height="40" fill="#E74C3C"/>
+  <rect x="320" y="220" width="50" height="10" fill="#C0392B"/>
+  <rect x="325" y="235" width="40" height="5" fill="#ECF0F1"/>
+  <rect x="325" y="245" width="40" height="5" fill="#ECF0F1"/>
+  <rect x="325" y="255" width="40" height="5" fill="#ECF0F1"/>
+  
+  <!-- Shop Equipment -->
+  <rect x="20" y="230" width="30" height="40" fill="#7F8C8D"/>
+  <circle cx="35" cy="240" r="8" fill="#95A5A6"/>
+  <rect x="25" y="250" width="20" height="20" fill="#95A5A6"/>
+  
+  <!-- Overhead Lights -->
+  <rect x="50" y="20" width="80" height="10" fill="#F1C40F" opacity="0.8"/>
+  <rect x="160" y="20" width="80" height="10" fill="#F1C40F" opacity="0.8"/>
+  <rect x="270" y="20" width="80" height="10" fill="#F1C40F" opacity="0.8"/>
+  <line x1="90" y1="20" x2="90" y2="10" stroke="#BDC3C7" stroke-width="2"/>
+  <line x1="200" y1="20" x2="200" y2="10" stroke="#BDC3C7" stroke-width="2"/>
+  <line x1="310" y1="20" x2="310" y2="10" stroke="#BDC3C7" stroke-width="2"/>
+  
+  <!-- Light Beams -->
+  <polygon points="50,30 130,30 140,220 40,220" fill="#F1C40F" opacity="0.1"/>
+  <polygon points="160,30 240,30 250,220 150,220" fill="#F1C40F" opacity="0.1"/>
+  <polygon points="270,30 350,30 360,220 260,220" fill="#F1C40F" opacity="0.1"/>
 </svg>

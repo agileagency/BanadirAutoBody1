@@ -1,0 +1,31 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="#27AE60"/>
+  <circle cx="100" cy="100" r="85" fill="#ECF0F1"/>
+  
+  <!-- Car Frame Outline -->
+  <path d="M40,110 L50,90 L70,80 L130,80 L150,90 L160,110" stroke="#34495E" stroke-width="4" fill="none"/>
+  
+  <!-- Frame Structure Lines -->
+  <line x1="60" y1="95" x2="140" y2="95" stroke="#34495E" stroke-width="3"/>
+  <line x1="70" y1="80" x2="70" y2="110" stroke="#34495E" stroke-width="3"/>
+  <line x1="130" y1="80" x2="130" y2="110" stroke="#34495E" stroke-width="3"/>
+  <line x1="90" y1="80" x2="90" y2="95" stroke="#34495E" stroke-width="3"/>
+  <line x1="110" y1="80" x2="110" y2="95" stroke="#34495E" stroke-width="3"/>
+  
+  <!-- Frame Measurement Tool -->
+  <line x1="30" y1="120" x2="170" y2="120" stroke="#7F8C8D" stroke-width="2"/>
+  <path d="M30,115 L30,125 M50,115 L50,125 M70,115 L70,125 M90,115 L90,125 M110,115 L110,125 M130,115 L130,125 M150,115 L150,125 M170,115 L170,125" stroke="#7F8C8D" stroke-width="2"/>
+  
+  <!-- Wrench and Tools -->
+  <path d="M115,50 L130,65 L125,70 L110,55 Z" fill="#7F8C8D" stroke="#2C3E50" stroke-width="1"/>
+  <circle cx="120" cy="60" r="5" fill="#7F8C8D" stroke="#2C3E50" stroke-width="1"/>
+  
+  <!-- Hammer Tool -->
+  <rect x="70" y="55" width="5" height="20" fill="#7F8C8D" stroke="#2C3E50" stroke-width="1"/>
+  <path d="M60,50 L85,50 L80,40 L65,40 Z" fill="#7F8C8D" stroke="#2C3E50" stroke-width="1"/>
+  
+  <!-- Service Label -->
+  <rect x="40" y="140" width="120" height="30" rx="5" fill="#27AE60"/>
+  <text x="100" y="160" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">FRAME REPAIR</text>
+</svg>

@@ -1,6 +1,85 @@
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#27AE60"/>
-  <rect x="150" y="100" width="300" height="200" rx="10" fill="#2ECC71"/>
-  <rect x="175" y="125" width="250" height="150" rx="5" fill="#D5F5E3"/>
-  <text x="300" y="200" font-family="Arial" font-size="24" text-anchor="middle" fill="#2C3E50">Interior Restoration</text>
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background - Wheel Alignment Setup -->
+  <rect width="100%" height="100%" fill="#2C3E50"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="220" width="400" height="80" fill="#95A5A6"/>
+  <line x1="0" y1="220" x2="400" y2="220" stroke="#7F8C8D" stroke-width="2"/>
+  
+  <!-- Alignment Rack Platform -->
+  <rect x="50" y="200" width="300" height="20" fill="#34495E"/>
+  <rect x="75" y="200" width="250" height="10" fill="#2C3E50"/>
+  
+  <!-- Car on Alignment Rack -->
+  <path d="M100,200 L120,170 L280,170 L300,200 Z" fill="#F1C40F"/>
+  <path d="M130,170 L150,140 L250,140 L270,170 Z" fill="#F1C40F"/>
+  <rect x="150" y="140" width="100" height="30" fill="#F1C40F"/>
+  
+  <!-- Car Windows -->
+  <path d="M150,140 L160,120 L240,120 L250,140 Z" fill="#3498DB" fill-opacity="0.7"/>
+  
+  <!-- Wheel Clamps and Sensors -->
+  <!-- Front Left -->
+  <circle cx="130" cy="200" r="20" fill="#34495E"/>
+  <circle cx="130" cy="200" r="15" fill="#7F8C8D"/>
+  <circle cx="130" cy="200" r="5" fill="#2C3E50"/>
+  <rect x="110" y="190" width="40" height="5" fill="#E74C3C"/>
+  <rect x="90" y="180" width="10" height="20" fill="#E74C3C"/>
+  <circle cx="95" cy="170" r="8" fill="#F1C40F"/>
+  
+  <!-- Front Right -->
+  <circle cx="270" cy="200" r="20" fill="#34495E"/>
+  <circle cx="270" cy="200" r="15" fill="#7F8C8D"/>
+  <circle cx="270" cy="200" r="5" fill="#2C3E50"/>
+  <rect x="250" y="190" width="40" height="5" fill="#E74C3C"/>
+  <rect x="300" y="180" width="10" height="20" fill="#E74C3C"/>
+  <circle cx="305" cy="170" r="8" fill="#F1C40F"/>
+  
+  <!-- Rear Left -->
+  <circle cx="130" cy="150" r="15" fill="#34495E"/>
+  <circle cx="130" cy="150" r="10" fill="#7F8C8D"/>
+  <rect x="110" y="145" width="30" height="5" fill="#E74C3C"/>
+  <rect x="90" y="145" width="10" height="20" fill="#E74C3C"/>
+  <circle cx="95" cy="135" r="8" fill="#F1C40F"/>
+  
+  <!-- Rear Right -->
+  <circle cx="270" cy="150" r="15" fill="#34495E"/>
+  <circle cx="270" cy="150" r="10" fill="#7F8C8D"/>
+  <rect x="260" y="145" width="30" height="5" fill="#E74C3C"/>
+  <rect x="300" y="145" width="10" height="20" fill="#E74C3C"/>
+  <circle cx="305" cy="135" r="8" fill="#F1C40F"/>
+  
+  <!-- Laser Alignment Lines -->
+  <line x1="95" y1="170" x2="95" y2="135" stroke="#F1C40F" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="305" y1="170" x2="305" y2="135" stroke="#F1C40F" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="95" y1="170" x2="305" y2="170" stroke="#F1C40F" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="95" y1="135" x2="305" y2="135" stroke="#F1C40F" stroke-width="1" stroke-dasharray="3,3"/>
+  
+  <!-- Alignment Computer -->
+  <rect x="350" y="150" width="30" height="50" fill="#ECF0F1"/>
+  <rect x="355" y="155" width="20" height="30" fill="#3498DB"/>
+  <rect x="355" y="190" width="20" height="5" fill="#7F8C8D"/>
+  
+  <!-- Alignment Computer Cables -->
+  <path d="M350,175 C330,175 330,170 300,170" stroke="#34495E" stroke-width="2" fill="none"/>
+  <path d="M350,185 C330,185 330,135 300,135" stroke="#34495E" stroke-width="2" fill="none"/>
+  
+  <!-- Mechanic Silhouette -->
+  <circle cx="35" cy="150" r="15" fill="#ECF0F1"/>  <!-- Head -->
+  <rect x="30" y="165" width="10" height="35" fill="#3498DB"/>  <!-- Body -->
+  <rect x="15" y="175" width="15" height="5" fill="#ECF0F1"/>  <!-- Left arm -->
+  <rect x="40" y="175" width="15" height="5" fill="#ECF0F1"/>  <!-- Right arm -->
+  <rect x="30" y="200" width="4" height="20" fill="#2C3E50"/>  <!-- Left leg -->
+  <rect x="36" y="200" width="4" height="20" fill="#2C3E50"/>  <!-- Right leg -->
+  
+  <!-- Title Banner -->
+  <rect x="100" y="30" width="200" height="30" rx="5" fill="#F1C40F"/>
+  <text x="200" y="50" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2C3E50">WHEEL ALIGNMENT SERVICE</text>
+  
+  <!-- Measurement Indicators -->
+  <rect x="150" y="70" width="100" height="40" rx="5" fill="#34495E"/>
+  <line x1="170" y1="90" x2="230" y2="90" stroke="#ECF0F1" stroke-width="1"/>
+  <line x1="200" y1="80" x2="200" y2="100" stroke="#ECF0F1" stroke-width="1"/>
+  <line x1="180" y1="80" x2="220" y2="100" stroke="#E74C3C" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="200" y="105" font-family="Arial" font-size="8" text-anchor="middle" fill="white">CAMBER/TOE</text>
 </svg>

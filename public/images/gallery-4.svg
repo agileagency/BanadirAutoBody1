@@ -1,6 +1,62 @@
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#F39C12"/>
-  <rect x="150" y="100" width="300" height="200" rx="10" fill="#F1C40F"/>
-  <rect x="175" y="125" width="250" height="150" rx="5" fill="#FDEBD0"/>
-  <text x="300" y="200" font-family="Arial" font-size="24" text-anchor="middle" fill="#2C3E50">Fender Repair</text>
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background - Frame Alignment Equipment -->
+  <rect width="100%" height="100%" fill="#2C3E50"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="220" width="400" height="80" fill="#95A5A6"/>
+  <line x1="0" y1="220" x2="400" y2="220" stroke="#7F8C8D" stroke-width="2"/>
+  
+  <!-- Frame Alignment Machine Base -->
+  <rect x="50" y="180" width="300" height="40" fill="#7F8C8D"/>
+  <rect x="75" y="160" width="250" height="20" fill="#95A5A6"/>
+  
+  <!-- Frame Alignment Rails -->
+  <rect x="75" y="160" width="10" height="60" fill="#34495E"/>
+  <rect x="315" y="160" width="10" height="60" fill="#34495E"/>
+  <rect x="75" y="150" width="250" height="10" fill="#34495E"/>
+  
+  <!-- Car on Frame Machine -->
+  <path d="M100,150 L120,120 L280,120 L300,150 Z" fill="#3498DB"/>
+  <path d="M130,120 L150,90 L250,90 L270,120 Z" fill="#3498DB"/>
+  <circle cx="130" cy="150" r="15" fill="#34495E"/>
+  <circle cx="270" cy="150" r="15" fill="#34495E"/>
+  
+  <!-- Measurement Arms -->
+  <rect x="90" y="110" width="5" height="40" fill="#E74C3C"/>
+  <rect x="305" y="110" width="5" height="40" fill="#E74C3C"/>
+  <rect x="200" y="80" width="5" height="40" fill="#E74C3C"/>
+  
+  <!-- Measurement Sensors -->
+  <circle cx="92" cy="105" r="5" fill="#F1C40F"/>
+  <circle cx="307" cy="105" r="5" fill="#F1C40F"/>
+  <circle cx="202" cy="75" r="5" fill="#F1C40F"/>
+  
+  <!-- Laser Measurement Lines -->
+  <line x1="92" y1="105" x2="202" y2="75" stroke="#F1C40F" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="307" y1="105" x2="202" y2="75" stroke="#F1C40F" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="92" y1="105" x2="307" y2="105" stroke="#F1C40F" stroke-width="1" stroke-dasharray="2,2"/>
+  
+  <!-- Equipment Control Panel -->
+  <rect x="20" y="120" width="40" height="60" fill="#34495E"/>
+  <rect x="25" y="125" width="30" height="20" fill="#ECF0F1"/>
+  <circle cx="30" cy="155" r="5" fill="#E74C3C"/>
+  <circle cx="40" cy="155" r="5" fill="#27AE60"/>
+  <circle cx="50" cy="155" r="5" fill="#F1C40F"/>
+  <rect x="25" y="165" width="30" height="10" fill="#BDC3C7"/>
+  
+  <!-- Hydraulic System -->
+  <rect x="340" y="120" width="40" height="60" fill="#E74C3C"/>
+  <circle cx="360" cy="135" r="10" fill="#C0392B"/>
+  <rect x="355" y="145" width="10" height="30" fill="#C0392B"/>
+  <path d="M340,180 L325,180 L325,150" stroke="#7F8C8D" stroke-width="3" fill="none"/>
+  
+  <!-- Mechanic Silhouette -->
+  <circle cx="35" cy="80" r="15" fill="#ECF0F1"/>  <!-- Head -->
+  <rect x="30" y="95" width="10" height="25" fill="#27AE60"/>  <!-- Body -->
+  <path d="M30,100 L15,110" stroke="#ECF0F1" stroke-width="2"/>  <!-- Left arm -->
+  <path d="M40,100 L55,110" stroke="#ECF0F1" stroke-width="2"/>  <!-- Right arm -->
+  
+  <!-- Title Banner -->
+  <rect x="100" y="30" width="200" height="30" rx="5" fill="#3498DB"/>
+  <text x="200" y="50" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">PRECISION FRAME ALIGNMENT</text>
 </svg>

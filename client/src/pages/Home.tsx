@@ -5,6 +5,7 @@ import CallToAction from '@/components/home/CallToAction';
 import GalleryGrid from '@/components/gallery/GalleryGrid';
 import TestimonialSlider from '@/components/testimonials/TestimonialSlider';
 import InsuranceProcess from '@/components/insurance/InsuranceProcess';
+import Map from '@/components/contact/Map';
 import { Link } from 'wouter';
 import { Helmet } from 'react-helmet';
 
@@ -77,6 +78,21 @@ const Home = () => {
         </section>
         
         <InsuranceProcess />
+        
+        <section id="home-location" className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4 text-primary">Find Us</h2>
+              <p className="text-lg max-w-2xl mx-auto text-gray-600">
+                Conveniently located in Minneapolis, MN. Stop by or schedule an appointment today.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-b from-primary/5 to-primary/20 rounded-2xl p-8 shadow-lg">
+              <Map />
+            </div>
+          </div>
+        </section>
         
         <CallToAction />
       </div>

@@ -2,7 +2,7 @@
 export const COMPANY_NAME = "Banadir Auto Body Shop";
 export const COMPANY_PHONE = "(612) 555-1234";
 export const COMPANY_EMAIL = "info@banadirauto.com";
-export const COMPANY_ADDRESS = "123 Auto Shop Lane, Minneapolis, MN 55401";
+export const COMPANY_ADDRESS = "3013 Pillsbury Ave, Minneapolis, MN 55408";
 export const COMPANY_FOUNDED = "2012";
 
 // Business hours

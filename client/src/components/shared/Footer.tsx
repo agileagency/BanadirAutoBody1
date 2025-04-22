@@ -78,7 +78,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <i className="fas fa-map-marker-alt mt-1 mr-3 text-[#D4AF37]"></i>
-                <span className="opacity-90">123 Auto Shop Lane<br />Minneapolis, MN 55401</span>
+                <span className="opacity-90">3013 Pillsbury Ave<br />Minneapolis, MN 55408</span>
               </li>
               <li className="flex items-center">
                 <i className="fas fa-phone-alt mr-3 text-[#D4AF37]"></i>

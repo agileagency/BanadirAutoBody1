@@ -29,7 +29,7 @@ const BanadirMainIntegration = () => {
     queryKey: ['/api/banadir-main/status'],
     queryFn: async () => {
       try {
-        const result = await apiRequest({
+        const result = await apiRequest<{success: boolean, message: string}>({
           url: '/api/banadir-main/init',
           method: 'POST'
         });
@@ -46,11 +46,10 @@ const BanadirMainIntegration = () => {
   // Initialize integration mutation
   const initMutation = useMutation({
     mutationFn: async () => {
-      const result = await apiRequest({
+      return apiRequest<{success: boolean, message: string}>({
         url: '/api/banadir-main/init',
         method: 'POST'
       });
-      return result;
     },
     onSuccess: () => {
       toast({
@@ -72,11 +71,10 @@ const BanadirMainIntegration = () => {
   // Sync contacts mutation
   const syncContactsMutation = useMutation({
     mutationFn: async () => {
-      const result = await apiRequest<{count: number}>({
+      return apiRequest<{success: boolean, message: string, count: number}>({
         url: '/api/banadir-main/sync/contacts',
         method: 'POST'
       });
-      return result;
     },
     onSuccess: (data) => {
       toast({
@@ -97,11 +95,10 @@ const BanadirMainIntegration = () => {
   // Fetch appointments mutation
   const fetchAppointmentsMutation = useMutation({
     mutationFn: async () => {
-      const result = await apiRequest<{count: number}>({
+      return apiRequest<{success: boolean, message: string, count: number}>({
         url: '/api/banadir-main/sync/appointments',
         method: 'POST'
       });
-      return result;
     },
     onSuccess: (data) => {
       toast({
@@ -122,11 +119,10 @@ const BanadirMainIntegration = () => {
   // Run complete sync mutation
   const syncAllMutation = useMutation({
     mutationFn: async () => {
-      const result = await apiRequest<{data: {contactsSync: number, appointmentsSync: number}}>({
+      return apiRequest<{success: boolean, message: string, data: {contactsSync: number, appointmentsSync: number}}>({
         url: '/api/banadir-main/sync/all',
         method: 'POST'
       });
-      return result;
     },
     onSuccess: (data) => {
       const contactsSync = data.data?.contactsSync || 0;

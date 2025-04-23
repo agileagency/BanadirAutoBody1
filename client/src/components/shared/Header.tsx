@@ -22,6 +22,9 @@ const Header = () => {
     { name: 'Insurance', path: '/insurance' },
     { name: 'Contact Us', path: '/contact', isButton: true }
   ];
+  
+  // Admin link - separate from main navigation
+  const adminLink = { name: 'Admin', path: '/admin' };
 
   return (
     <header className="bg-primary text-white w-full fixed top-0 z-50 shadow-md">
@@ -47,18 +50,27 @@ const Header = () => {
           {navItems.map((item) => (
             item.isButton ? (
               <Link key={item.name} href={item.path} onClick={closeMobileMenu}>
-                <a className="bg-[#D4AF37] hover:bg-opacity-90 text-primary px-5 py-2 rounded-md font-bold transition">
+                <span className="bg-[#D4AF37] hover:bg-opacity-90 text-primary px-5 py-2 rounded-md font-bold transition cursor-pointer inline-block">
                   {item.name}
-                </a>
+                </span>
               </Link>
             ) : (
               <Link key={item.name} href={item.path} onClick={closeMobileMenu}>
-                <a className={`text-white hover:text-[#D4AF37] font-semibold transition ${location === item.path ? 'text-[#D4AF37]' : ''}`}>
+                <span className={`text-white hover:text-[#D4AF37] font-semibold transition cursor-pointer ${location === item.path ? 'text-[#D4AF37]' : ''}`}>
                   {item.name}
-                </a>
+                </span>
               </Link>
             )
           ))}
+          
+          {/* Admin Link */}
+          <div className="border-l border-white/30 pl-4">
+            <Link href={adminLink.path} onClick={closeMobileMenu}>
+              <span className={`text-white hover:text-[#D4AF37] font-semibold transition cursor-pointer ${location === adminLink.path ? 'text-[#D4AF37]' : ''}`}>
+                {adminLink.name}
+              </span>
+            </Link>
+          </div>
         </nav>
       </div>
       
@@ -67,13 +79,22 @@ const Header = () => {
         <div className="container mx-auto px-4 py-3 flex flex-col space-y-4">
           {navItems.map((item) => (
             <Link key={item.name} href={item.path} onClick={closeMobileMenu}>
-              <a className={item.isButton 
-                ? "bg-[#D4AF37] text-primary px-5 py-2 rounded-md inline-block font-bold transition text-center" 
-                : `text-white hover:text-[#D4AF37] py-2 font-semibold transition ${location === item.path ? 'text-[#D4AF37]' : ''}`}>
+              <span className={item.isButton 
+                ? "bg-[#D4AF37] text-primary px-5 py-2 rounded-md inline-block font-bold transition text-center w-full cursor-pointer" 
+                : `text-white hover:text-[#D4AF37] py-2 font-semibold transition cursor-pointer block ${location === item.path ? 'text-[#D4AF37]' : ''}`}>
                 {item.name}
-              </a>
+              </span>
             </Link>
           ))}
+          
+          {/* Admin Link for Mobile */}
+          <div className="border-t border-white/30 pt-2 mt-2">
+            <Link href={adminLink.path} onClick={closeMobileMenu}>
+              <span className={`text-white hover:text-[#D4AF37] py-2 font-semibold transition cursor-pointer block ${location === adminLink.path ? 'text-[#D4AF37]' : ''}`}>
+                {adminLink.name}
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </header>

@@ -39,7 +39,8 @@ const BanadirMainIntegration = () => {
         return { initialized: false, error: String(error) };
       }
     },
-    refetchInterval: 60000 // Refresh status every minute
+    refetchInterval: 60000, // Refresh status every minute
+    retry: false
   });
   
   // Initialize integration mutation
@@ -71,7 +72,7 @@ const BanadirMainIntegration = () => {
   // Sync contacts mutation
   const syncContactsMutation = useMutation({
     mutationFn: async () => {
-      const result = await apiRequest({
+      const result = await apiRequest<{count: number}>({
         url: '/api/banadir-main/sync/contacts',
         method: 'POST'
       });
@@ -80,7 +81,7 @@ const BanadirMainIntegration = () => {
     onSuccess: (data) => {
       toast({
         title: 'Contacts Synced',
-        description: `Successfully synced ${data.count} contact submissions.`,
+        description: `Successfully synced ${data.count || 0} contact submissions.`,
         variant: 'default'
       });
     },
@@ -96,7 +97,7 @@ const BanadirMainIntegration = () => {
   // Fetch appointments mutation
   const fetchAppointmentsMutation = useMutation({
     mutationFn: async () => {
-      const result = await apiRequest({
+      const result = await apiRequest<{count: number}>({
         url: '/api/banadir-main/sync/appointments',
         method: 'POST'
       });
@@ -105,7 +106,7 @@ const BanadirMainIntegration = () => {
     onSuccess: (data) => {
       toast({
         title: 'Appointments Fetched',
-        description: `Successfully fetched ${data.count} appointments.`,
+        description: `Successfully fetched ${data.count || 0} appointments.`,
         variant: 'default'
       });
     },
@@ -121,16 +122,18 @@ const BanadirMainIntegration = () => {
   // Run complete sync mutation
   const syncAllMutation = useMutation({
     mutationFn: async () => {
-      const result = await apiRequest({
+      const result = await apiRequest<{data: {contactsSync: number, appointmentsSync: number}}>({
         url: '/api/banadir-main/sync/all',
         method: 'POST'
       });
       return result;
     },
     onSuccess: (data) => {
+      const contactsSync = data.data?.contactsSync || 0;
+      const appointmentsSync = data.data?.appointmentsSync || 0;
       toast({
         title: 'Full Sync Complete',
-        description: `Synced ${data.data.contactsSync} contacts and ${data.data.appointmentsSync} appointments.`,
+        description: `Synced ${contactsSync} contacts and ${appointmentsSync} appointments.`,
         variant: 'default'
       });
     },
@@ -165,8 +168,8 @@ const BanadirMainIntegration = () => {
               </CardDescription>
             </div>
             <Badge 
-              variant={statusQuery.data?.initialized ? "success" : "destructive"}
-              className="px-3 py-1 text-xs"
+              variant={statusQuery.data?.initialized ? "default" : "destructive"}
+              className={`px-3 py-1 text-xs ${statusQuery.data?.initialized ? 'bg-green-500 hover:bg-green-600' : ''}`}
             >
               {statusQuery.data?.initialized ? 'Connected' : 'Disconnected'}
             </Badge>

@@ -26,10 +26,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         message: "Contact form submitted successfully",
         data: submission
       });
-    } catch (error) {
+    } catch (error: unknown) {
       // If validation error, return formatted error message
-      if (error.name === "ZodError") {
-        const validationError = fromZodError(error);
+      if (error instanceof Error && error.name === "ZodError") {
+        const validationError = fromZodError(error as any);
         return res.status(400).json({
           success: false,
           message: "Validation error",
@@ -53,7 +53,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: true,
         data: submissions
       });
-    } catch (error) {
+    } catch (error: unknown) {
       return res.status(500).json({
         success: false,
         message: "An error occurred while retrieving contact submissions"
@@ -86,7 +86,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: true,
         data: submission
       });
-    } catch (error) {
+    } catch (error: unknown) {
       return res.status(500).json({
         success: false,
         message: "An error occurred while retrieving the contact submission"
@@ -104,7 +104,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: true,
         message: "Banadir Main integration initialized successfully"
       });
-    } catch (error) {
+    } catch (error: unknown) {
       console.error("Error initializing Banadir Main:", error);
       return res.status(500).json({
         success: false,
@@ -122,7 +122,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         message: `Synchronized ${syncCount} contact submissions with Banadir Main`,
         count: syncCount
       });
-    } catch (error) {
+    } catch (error: unknown) {
       console.error("Error syncing contacts with Banadir Main:", error);
       return res.status(500).json({
         success: false,
@@ -140,7 +140,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         message: `Fetched ${fetchCount} appointments from Banadir Main`,
         count: fetchCount
       });
-    } catch (error) {
+    } catch (error: unknown) {
       console.error("Error fetching appointments from Banadir Main:", error);
       return res.status(500).json({
         success: false,
@@ -158,7 +158,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         message: "Complete sync with Banadir Main completed successfully",
         data: results
       });
-    } catch (error) {
+    } catch (error: unknown) {
       console.error("Error running complete sync with Banadir Main:", error);
       return res.status(500).json({
         success: false,

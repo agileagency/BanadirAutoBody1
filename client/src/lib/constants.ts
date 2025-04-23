@@ -1,7 +1,7 @@
 // Company information
-export const COMPANY_NAME = "Banadir Auto Body Shop";
+export const COMPANY_NAME = "Banadir Main";
 export const COMPANY_PHONE = "(612) 555-1234";
-export const COMPANY_EMAIL = "info@banadirauto.com";
+export const COMPANY_EMAIL = "info@banadirmain.com";
 export const COMPANY_ADDRESS = "3013 Pillsbury Ave, Minneapolis, MN 55408";
 export const COMPANY_FOUNDED = "2012";
 
@@ -136,7 +136,7 @@ export const GALLERY_ITEMS = [
 export const TESTIMONIALS = [
   {
     id: 1,
-    content: "After my accident, I was devastated about the damage to my car. Banadir Auto Body Shop not only restored my vehicle to its original condition, but they made the entire insurance process stress-free. Their attention to detail is impressive!",
+    content: "After my accident, I was devastated about the damage to my car. Banadir Main not only restored my vehicle to its original condition, but they made the entire insurance process stress-free. Their attention to detail is impressive!",
     author: "Sarah Johnson",
     location: "Minneapolis, MN",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=80",

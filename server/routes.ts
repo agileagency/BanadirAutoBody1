@@ -1,8 +1,14 @@
-import type { Express } from "express";
+import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSubmissionSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
+import { 
+  initializeBanadirMain, 
+  runCompleteSync, 
+  syncContactSubmissions, 
+  fetchAppointments 
+} from "./banadirMain";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission API endpoint
@@ -88,7 +94,85 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Banadir Main Integration API Endpoints
+  
+  // Initialize the Banadir Main integration
+  app.post("/api/banadir-main/init", async (req, res) => {
+    try {
+      await initializeBanadirMain();
+      return res.status(200).json({
+        success: true,
+        message: "Banadir Main integration initialized successfully"
+      });
+    } catch (error) {
+      console.error("Error initializing Banadir Main:", error);
+      return res.status(500).json({
+        success: false,
+        message: "An error occurred while initializing Banadir Main integration"
+      });
+    }
+  });
+  
+  // Manual sync endpoint for contact submissions
+  app.post("/api/banadir-main/sync/contacts", async (req, res) => {
+    try {
+      const syncCount = await syncContactSubmissions();
+      return res.status(200).json({
+        success: true,
+        message: `Synchronized ${syncCount} contact submissions with Banadir Main`,
+        count: syncCount
+      });
+    } catch (error) {
+      console.error("Error syncing contacts with Banadir Main:", error);
+      return res.status(500).json({
+        success: false,
+        message: "An error occurred while syncing contacts with Banadir Main"
+      });
+    }
+  });
+  
+  // Manual fetch endpoint for appointments
+  app.post("/api/banadir-main/sync/appointments", async (req, res) => {
+    try {
+      const fetchCount = await fetchAppointments();
+      return res.status(200).json({
+        success: true,
+        message: `Fetched ${fetchCount} appointments from Banadir Main`,
+        count: fetchCount
+      });
+    } catch (error) {
+      console.error("Error fetching appointments from Banadir Main:", error);
+      return res.status(500).json({
+        success: false,
+        message: "An error occurred while fetching appointments from Banadir Main"
+      });
+    }
+  });
+  
+  // Run a complete sync with Banadir Main
+  app.post("/api/banadir-main/sync/all", async (req, res) => {
+    try {
+      const results = await runCompleteSync();
+      return res.status(200).json({
+        success: true,
+        message: "Complete sync with Banadir Main completed successfully",
+        data: results
+      });
+    } catch (error) {
+      console.error("Error running complete sync with Banadir Main:", error);
+      return res.status(500).json({
+        success: false,
+        message: "An error occurred while running complete sync with Banadir Main"
+      });
+    }
+  });
+
   const httpServer = createServer(app);
+  
+  // Initialize Banadir Main integration when server starts
+  initializeBanadirMain()
+    .then(() => console.log("Banadir Main integration initialized"))
+    .catch(err => console.error("Failed to initialize Banadir Main integration:", err));
 
   return httpServer;
 }

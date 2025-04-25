@@ -6,9 +6,9 @@ const Hero = () => {
       {/* Hero Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/images/hero-image.svg" 
-          alt="Professional auto mechanic working on a vehicle" 
-          className="w-full h-full object-cover opacity-60"
+          src="https://images.unsplash.com/photo-1603553329474-99f95f35394f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+          alt="Classic red Ford Mustang" 
+          className="w-full h-full object-cover opacity-70"
         />
       </div>
       

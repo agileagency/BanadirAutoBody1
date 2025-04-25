@@ -27,7 +27,7 @@ const Header = () => {
   const adminLink = { name: 'Admin', path: '/admin' };
 
   return (
-    <header className="bg-primary text-white w-full fixed top-0 z-50 shadow-md">
+    <header className="bg-primary text-white w-full relative z-50 shadow-md">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">

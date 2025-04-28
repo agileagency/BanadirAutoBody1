@@ -105,7 +105,7 @@ const LandingPage = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-[32rem] bg-gray-900 overflow-hidden" id="home">
+      <section className="relative min-h-screen bg-gray-900 overflow-hidden flex items-center pt-24 pb-16" id="home">
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -115,42 +115,84 @@ const LandingPage = () => {
           />
         </div>
         
-        {/* Hero Content Overlay */}
+        {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 z-10"></div>
+        <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-5 z-10"></div>
         
         <div className="container mx-auto px-4 h-full flex items-center relative z-20">
-          <div className="max-w-3xl text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-['Montserrat'] leading-tight mb-6">
-              Minneapolis' Premier <span className="text-[#D4AF37]">Auto Body Shop</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Expert repairs for all vehicle types with a commitment to quality and customer satisfaction.
-            </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <a href="#contact" className="bg-[#D4AF37] hover:bg-opacity-90 text-primary px-8 py-4 rounded-md font-bold text-lg transition text-center">
-                Schedule Repair
-              </a>
-              <a href="#services" className="border-2 border-white hover:border-[#D4AF37] hover:text-[#D4AF37] text-white px-8 py-4 rounded-md font-bold text-lg transition text-center">
-                Our Services
-              </a>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <div className="inline-block bg-primary/30 backdrop-blur-sm px-4 py-2 rounded-lg mb-6 border-l-4 border-[#D4AF37] animate-fade-in-right">
+                <span className="text-[#D4AF37] font-semibold">Minneapolis, MN</span>
+              </div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-['Montserrat'] leading-tight mb-6 animate-fade-in-up">
+                Minneapolis' <span className="text-[#D4AF37] inline-block relative">
+                  Premier
+                  <svg className="absolute -bottom-3 left-0 w-full" viewBox="0 0 100 12" width="100%" height="12">
+                    <path d="M0,5 Q50,10 100,5 T200,5" fill="none" stroke="#D4AF37" strokeWidth="3" />
+                  </svg>
+                </span> Auto Body Shop
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-xl animate-fade-in-up animation-delay-300">
+                Expert repairs for all vehicle types with a commitment to quality and customer satisfaction.
+              </p>
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up animation-delay-500">
+                <a href="#contact" className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-primary px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 group">
+                  Schedule Repair
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 inline-block ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
+                <a href="#services" className="border-2 border-white hover:border-[#D4AF37] hover:text-[#D4AF37] hover:bg-white/5 text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center backdrop-blur-sm">
+                  Our Services
+                </a>
+              </div>
+              
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap items-center mt-12 gap-8 animate-fade-in-up animation-delay-700">
+                <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                  <Shield className="text-[#D4AF37] w-6 h-6 mr-3" />
+                  <span className="text-lg">Certified Technicians</span>
+                </div>
+                <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                  <CheckCircle className="text-[#D4AF37] w-6 h-6 mr-3" />
+                  <span className="text-lg">Quality Guaranteed</span>
+                </div>
+                <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                  <DollarSign className="text-[#D4AF37] w-6 h-6 mr-3" />
+                  <span className="text-lg">All Insurance Accepted</span>
+                </div>
+              </div>
             </div>
             
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center mt-12 gap-8">
-              <div className="flex items-center">
-                <Shield className="text-[#D4AF37] w-6 h-6 mr-3" />
-                <span className="text-lg">Certified Technicians</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="text-[#D4AF37] w-6 h-6 mr-3" />
-                <span className="text-lg">Quality Guaranteed</span>
-              </div>
-              <div className="flex items-center">
-                <DollarSign className="text-[#D4AF37] w-6 h-6 mr-3" />
-                <span className="text-lg">All Insurance Accepted</span>
+            {/* Right side decorative element */}
+            <div className="hidden md:block relative">
+              <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-[#D4AF37]/30 to-[#D4AF37]/0 rounded-full filter blur-2xl opacity-70 animate-pulse"></div>
+              <div className="relative bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                <div className="text-white text-lg mb-4">10+ Years of Excellence</div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-primary/40 p-4 rounded-lg text-center">
+                    <div className="text-3xl font-bold text-[#D4AF37]">2,500+</div>
+                    <div className="text-white/90 text-sm">Vehicles Repaired</div>
+                  </div>
+                  <div className="bg-primary/40 p-4 rounded-lg text-center">
+                    <div className="text-3xl font-bold text-[#D4AF37]">100%</div>
+                    <div className="text-white/90 text-sm">Satisfaction</div>
+                  </div>
+                  <div className="bg-primary/40 p-4 rounded-lg text-center col-span-2">
+                    <div className="text-xl font-bold text-white">All Insurance Companies Accepted</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce hidden md:block">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 
@@ -169,43 +211,96 @@ const LandingPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50" id="services">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">Our <span className="text-primary">Services</span></h2>
+      <section className="py-24 bg-gray-50 relative overflow-hidden" id="services">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-primary/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-primary/10 rounded-full filter blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative">
+          <div className="text-center mb-20">
+            <div className="inline-block bg-primary/10 rounded-full px-4 py-1 text-primary font-medium mb-4">PROFESSIONAL SERVICES</div>
+            <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6 text-shadow">
+              Our <span className="text-primary relative inline-block">
+                Premium Services
+                <div className="absolute left-0 -bottom-2 w-full h-1 bg-[#D4AF37]/40"></div>
+              </span>
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer comprehensive auto body repair services with a focus on quality and customer satisfaction.
+              We offer comprehensive auto body repair services with a focus on quality, precision, and customer satisfaction.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {SERVICES.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <div className="h-48 bg-gray-200 overflow-hidden">
+              <div 
+                key={index} 
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover-card-effect group"
+              >
+                <div className="h-56 bg-gray-200 overflow-hidden relative">
                   <img 
                     src={service.image} 
                     alt={service.name} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  {/* Hover action */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <a href="#contact" className="inline-flex items-center text-[#D4AF37] font-semibold">
+                      Request Service
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-2">{service.name}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  {/* Service keywords */}
-                  <div className="flex flex-wrap gap-2">
+                
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-primary mb-3">{service.name}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  
+                  {/* Service features */}
+                  <div className="flex flex-wrap gap-2 mb-5">
                     <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">
-                      Professional
+                      Expert Technicians
                     </span>
                     <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">
-                      Quality
+                      Quality Materials
                     </span>
                     <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">
-                      Expert
+                      Warranty Coverage
                     </span>
+                  </div>
+                  
+                  {/* Service action */}
+                  <div className="pt-4 border-t border-gray-100">
+                    <a 
+                      href="#contact" 
+                      className="inline-flex items-center text-primary font-medium hover:text-[#D4AF37] transition-colors"
+                    >
+                      Learn more about {service.name.toLowerCase()}
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* Service CTA */}
+          <div className="mt-16 text-center">
+            <a 
+              href="#contact" 
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+            >
+              Request a Free Quote
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -302,46 +397,111 @@ const LandingPage = () => {
       </section>
 
       {/* Insurance Section */}
-      <section className="py-20 bg-gray-50" id="insurance">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-gray-100 relative overflow-hidden" id="insurance">
+        {/* Background decoration */}
+        <div className="absolute top-0 left-0 -ml-20 -mt-20 w-80 h-80 bg-primary/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 -mr-20 -mb-20 w-80 h-80 bg-primary/5 rounded-full filter blur-3xl"></div>
+        
+        <div className="absolute right-0 top-1/3 w-32 h-32 bg-[#D4AF37]/20 rounded-full filter blur-2xl"></div>
+        
+        <div className="container mx-auto px-4 relative">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">Insurance <span className="text-primary">Partners</span></h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We accept <span className="font-bold">ALL</span> insurance companies and have experts on staff who specialize in handling claims to make your repair process completely hassle-free.
-            </p>
-            <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-              Our team handles the entire insurance process from start to finish, including direct communication with adjusters, detailed documentation, and ensuring proper coverage for all repairs.
-            </p>
+            <div className="inline-block bg-primary/10 rounded-full px-4 py-1 text-primary font-medium mb-4">NO HASSLE CLAIMS</div>
+            <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6 text-shadow">
+              Insurance <span className="text-primary relative inline-block">
+                Claims Specialists
+                <div className="absolute left-0 -bottom-2 w-full h-1 bg-[#D4AF37]/40"></div>
+              </span>
+            </h2>
+            <div className="flex flex-col items-center justify-center">
+              <p className="text-xl text-gray-700 max-w-3xl">
+                We accept <span className="font-extrabold text-primary">ALL</span> insurance companies and have dedicated experts who specialize in handling claims to make your repair process completely hassle-free.
+              </p>
+              <div className="w-24 h-1 bg-primary/20 rounded-full my-6"></div>
+              <p className="text-lg text-gray-600 max-w-3xl">
+                Our team handles the entire insurance process from start to finish, including direct communication with adjusters, detailed documentation, and ensuring proper coverage for all repairs.
+              </p>
+            </div>
           </div>
           
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-10">Our Insurance Process</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {INSURANCE_PROCESS.map((step: { step: number; title: string; description: string }) => (
-                <div key={step.step} className="bg-white rounded-lg shadow-md p-6 border-t-4 border-primary">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white text-xl font-bold mb-4">
+          {/* Insurance Process Cards */}
+          <div className="mb-20 relative">
+            <div className="absolute top-1/2 left-0 w-full h-1 bg-gray-200 transform -translate-y-1/2 hidden lg:block"></div>
+            <h3 className="text-2xl md:text-3xl font-bold text-center mb-14 relative">
+              <span className="bg-gradient-to-r from-gray-50 via-white to-gray-50 px-8 relative z-10">Our Insurance Process</span>
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {INSURANCE_PROCESS.slice(0, 3).map((step: { step: number; title: string; description: string }) => (
+                <div key={step.step} className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-primary hover-card-effect relative z-10">
+                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white text-xl font-bold shadow-lg border-4 border-white">
                     {step.step}
                   </div>
-                  <h4 className="text-xl font-bold mb-3">{step.title}</h4>
-                  <p className="text-gray-600">{step.description}</p>
+                  <h4 className="text-xl font-bold mb-4 text-center pt-4">{step.title}</h4>
+                  <p className="text-gray-600 text-center">{step.description}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+              {INSURANCE_PROCESS.slice(3).map((step: { step: number; title: string; description: string }) => (
+                <div key={step.step} className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-primary hover-card-effect relative z-10">
+                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white text-xl font-bold shadow-lg border-4 border-white">
+                    {step.step}
+                  </div>
+                  <h4 className="text-xl font-bold mb-4 text-center pt-4">{step.title}</h4>
+                  <p className="text-gray-600 text-center">{step.description}</p>
                 </div>
               ))}
             </div>
           </div>
           
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold text-center mb-6">We Work With All Insurance Companies</h3>
-            <p className="text-center mb-10 max-w-3xl mx-auto">Including but not limited to the following providers:</p>
-          </div>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
-            {INSURANCE_COMPANIES.map((company, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-4 flex items-center justify-center h-24">
-                <div className="text-gray-700 font-semibold text-center">
-                  {company}
+          {/* Insurance Companies */}
+          <div className="bg-white rounded-2xl shadow-xl p-10 border border-gray-100">
+            <div className="mb-10 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">We Work With <span className="text-primary">All Insurance Companies</span></h3>
+              <div className="w-20 h-1 bg-[#D4AF37] mx-auto rounded-full mb-6"></div>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                No matter which insurance provider you use, we have the expertise to handle your claim. Our team has established relationships with all major providers to ensure a smooth repair process.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
+              {INSURANCE_COMPANIES.map((company, index) => (
+                <div 
+                  key={index} 
+                  className="bg-gray-50 hover:bg-primary/5 rounded-lg p-4 flex items-center justify-center h-24 transition-colors duration-300 border border-gray-100 shadow-sm hover:shadow"
+                >
+                  <div className="text-gray-700 font-semibold text-center">
+                    {company}
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Insurance CTA */}
+            <div className="mt-14 text-center">
+              <div className="bg-gray-50 p-8 rounded-xl inline-block max-w-3xl">
+                <h4 className="text-xl font-bold mb-4">Have Insurance Questions?</h4>
+                <p className="text-gray-600 mb-6">
+                  Our insurance specialists are ready to answer any questions and guide you through the entire claims process.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <a 
+                    href="#contact" 
+                    className="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 shadow-md hover:shadow-lg"
+                  >
+                    Contact Insurance Team
+                  </a>
+                  <div className="flex items-center justify-center text-primary font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    (612) 555-1234
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

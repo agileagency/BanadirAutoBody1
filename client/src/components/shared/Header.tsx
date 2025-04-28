@@ -1,9 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
+import { Phone } from 'lucide-react';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -13,35 +30,55 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Single page navigation
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Testimonials', path: '/testimonials' },
-    { name: 'Insurance', path: '/insurance' },
-    { name: 'Contact Us', path: '/contact', isButton: true }
+    { name: 'Home', path: '#home' },
+    { name: 'Services', path: '#services' },
+    { name: 'Gallery', path: '#gallery' },
+    { name: 'Testimonials', path: '#testimonials' },
+    { name: 'Insurance', path: '#insurance' },
+    { name: 'Contact', path: '#contact', isButton: true }
   ];
   
   // Admin link - separate from main navigation
   const adminLink = { name: 'Admin', path: '/admin' };
 
   return (
-    <header className="bg-primary text-white w-full relative z-50 shadow-md">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+    <header className={`${scrolled ? 'bg-primary/95 backdrop-blur-sm shadow-lg py-3' : 'bg-primary py-4'} text-white w-full fixed z-50 transition-all duration-300`}>
+      <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold font-['Montserrat'] tracking-tight">
+          <a href="#home" className="flex items-center" onClick={closeMobileMenu}>
+            <span className={`${scrolled ? 'text-xl' : 'text-2xl'} font-bold font-['Montserrat'] tracking-tight transition-all duration-300`}>
               <span className="text-[#D4AF37]">BANADIR</span> AUTO BODY
             </span>
-          </Link>
+          </a>
+        </div>
+
+        {/* Contact Info - Desktop */}
+        <div className="hidden md:flex items-center mr-6">
+          <div className="bg-[#D4AF37]/20 px-4 py-2 rounded-full flex items-center">
+            <Phone className="text-[#D4AF37] w-4 h-4 mr-2" />
+            <span className="text-white font-semibold">(612) 555-1234</span>
+          </div>
         </div>
         
         {/* Mobile Menu Button */}
         <div className="lg:hidden">
-          <button onClick={toggleMobileMenu} className="text-white hover:text-[#D4AF37] focus:outline-none">
-            <i className="fas fa-bars text-xl"></i>
+          <button 
+            onClick={toggleMobileMenu} 
+            className="text-white bg-primary/80 hover:bg-[#D4AF37]/20 p-2 rounded-md focus:outline-none transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
         
@@ -49,24 +86,24 @@ const Header = () => {
         <nav className="hidden lg:flex items-center space-x-8">
           {navItems.map((item) => (
             item.isButton ? (
-              <Link key={item.name} href={item.path} onClick={closeMobileMenu}>
-                <span className="bg-[#D4AF37] hover:bg-opacity-90 text-primary px-5 py-2 rounded-md font-bold transition cursor-pointer inline-block">
+              <a key={item.name} href={item.path} onClick={closeMobileMenu}>
+                <span className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-primary px-5 py-2 rounded-md font-bold transition cursor-pointer inline-block shadow-md hover:shadow-lg">
                   {item.name}
                 </span>
-              </Link>
+              </a>
             ) : (
-              <Link key={item.name} href={item.path} onClick={closeMobileMenu}>
-                <span className={`text-white hover:text-[#D4AF37] font-semibold transition cursor-pointer ${location === item.path ? 'text-[#D4AF37]' : ''}`}>
+              <a key={item.name} href={item.path} onClick={closeMobileMenu}>
+                <span className={`text-white hover:text-[#D4AF37] font-semibold transition cursor-pointer relative after:absolute after:w-0 after:h-0.5 after:bg-[#D4AF37] after:left-0 after:-bottom-1 hover:after:w-full after:transition-all after:duration-300`}>
                   {item.name}
                 </span>
-              </Link>
+              </a>
             )
           ))}
           
           {/* Admin Link */}
           <div className="border-l border-white/30 pl-4">
             <Link href={adminLink.path} onClick={closeMobileMenu}>
-              <span className={`text-white hover:text-[#D4AF37] font-semibold transition cursor-pointer ${location === adminLink.path ? 'text-[#D4AF37]' : ''}`}>
+              <span className="text-white/70 hover:text-[#D4AF37] font-semibold transition cursor-pointer">
                 {adminLink.name}
               </span>
             </Link>
@@ -75,22 +112,22 @@ const Header = () => {
       </div>
       
       {/* Mobile Navigation */}
-      <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} bg-primary lg:hidden`}>
-        <div className="container mx-auto px-4 py-3 flex flex-col space-y-4">
+      <div className={`${isMobileMenuOpen ? 'max-h-96 opacity-100 border-b border-white/10' : 'max-h-0 opacity-0 border-none'} bg-primary/95 backdrop-blur-sm lg:hidden overflow-hidden transition-all duration-300`}>
+        <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
           {navItems.map((item) => (
-            <Link key={item.name} href={item.path} onClick={closeMobileMenu}>
+            <a key={item.name} href={item.path} onClick={closeMobileMenu}>
               <span className={item.isButton 
-                ? "bg-[#D4AF37] text-primary px-5 py-2 rounded-md inline-block font-bold transition text-center w-full cursor-pointer" 
-                : `text-white hover:text-[#D4AF37] py-2 font-semibold transition cursor-pointer block ${location === item.path ? 'text-[#D4AF37]' : ''}`}>
+                ? "bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-primary px-5 py-2 rounded-md inline-block font-bold transition text-center w-full cursor-pointer shadow-md" 
+                : `text-white hover:text-[#D4AF37] py-2 font-semibold transition cursor-pointer block border-b border-white/10 pb-2`}>
                 {item.name}
               </span>
-            </Link>
+            </a>
           ))}
           
           {/* Admin Link for Mobile */}
-          <div className="border-t border-white/30 pt-2 mt-2">
+          <div className="pt-2">
             <Link href={adminLink.path} onClick={closeMobileMenu}>
-              <span className={`text-white hover:text-[#D4AF37] py-2 font-semibold transition cursor-pointer block ${location === adminLink.path ? 'text-[#D4AF37]' : ''}`}>
+              <span className="text-white/70 hover:text-[#D4AF37] py-2 font-semibold transition cursor-pointer block">
                 {adminLink.name}
               </span>
             </Link>

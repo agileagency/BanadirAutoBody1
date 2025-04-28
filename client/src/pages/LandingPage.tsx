@@ -592,11 +592,11 @@ const LandingPage = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block bg-primary/10 rounded-full px-4 py-1 text-primary font-medium mb-4">GET IN TOUCH</div>
+            <div className="inline-block bg-teal-50 rounded-full px-4 py-1 text-teal-700 font-medium mb-4">GET IN TOUCH</div>
             <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6 text-shadow">
-              Contact <span className="text-primary relative inline-block">
+              Contact <span className="text-teal-600 relative inline-block">
                 Our Team
-                <div className="absolute left-0 -bottom-2 w-full h-1 bg-[#D4AF37]/40"></div>
+                <div className="absolute left-0 -bottom-2 w-full h-1 bg-teal-400/40"></div>
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -608,22 +608,22 @@ const LandingPage = () => {
             {/* Contact Info */}
             <div className="space-y-8 lg:col-span-5">
               <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover-card-effect">
-                <h3 className="text-2xl font-bold text-primary mb-8 flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
-                    <Phone className="w-5 h-5 text-primary" />
+                <h3 className="text-2xl font-bold text-teal-700 mb-8 flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center mr-3">
+                    <Phone className="w-5 h-5 text-teal-600" />
                   </div>
                   How to Reach Us
                 </h3>
                 
                 <div className="space-y-8">
                   <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
-                    <div className="bg-primary/10 text-primary p-3 rounded-lg mr-4">
+                    <div className="bg-teal-50 text-teal-600 p-3 rounded-lg mr-4">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
                       <h4 className="font-bold mb-1 text-lg">Location</h4>
                       <p className="text-gray-700">{COMPANY_ADDRESS}</p>
-                      <a href="https://maps.google.com/?q=3013+Pillsbury+Ave+Minneapolis+MN+55408" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 text-sm flex items-center mt-2">
+                      <a href="https://maps.google.com/?q=3013+Pillsbury+Ave+Minneapolis+MN+55408" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 text-sm flex items-center mt-2">
                         Get Directions
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -633,13 +633,13 @@ const LandingPage = () => {
                   </div>
                   
                   <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
-                    <div className="bg-primary/10 text-primary p-3 rounded-lg mr-4">
+                    <div className="bg-teal-50 text-teal-600 p-3 rounded-lg mr-4">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
                       <h4 className="font-bold mb-1 text-lg">Phone</h4>
                       <p className="text-gray-700">{COMPANY_PHONE}</p>
-                      <a href={`tel:${COMPANY_PHONE.replace(/[^0-9]/g, '')}`} className="text-primary hover:text-primary/80 text-sm flex items-center mt-2">
+                      <a href={`tel:${COMPANY_PHONE.replace(/[^0-9]/g, '')}`} className="text-teal-600 hover:text-teal-700 text-sm flex items-center mt-2">
                         Call Us Now
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -649,13 +649,13 @@ const LandingPage = () => {
                   </div>
                   
                   <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
-                    <div className="bg-primary/10 text-primary p-3 rounded-lg mr-4">
+                    <div className="bg-teal-50 text-teal-600 p-3 rounded-lg mr-4">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
                       <h4 className="font-bold mb-1 text-lg">Email</h4>
                       <p className="text-gray-700">{COMPANY_EMAIL}</p>
-                      <a href={`mailto:${COMPANY_EMAIL}`} className="text-primary hover:text-primary/80 text-sm flex items-center mt-2">
+                      <a href={`mailto:${COMPANY_EMAIL}`} className="text-teal-600 hover:text-teal-700 text-sm flex items-center mt-2">
                         Send Email
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -665,7 +665,7 @@ const LandingPage = () => {
                   </div>
                   
                   <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
-                    <div className="bg-primary/10 text-primary p-3 rounded-lg mr-4">
+                    <div className="bg-teal-50 text-teal-600 p-3 rounded-lg mr-4">
                       <Clock className="w-5 h-5" />
                     </div>
                     <div>
@@ -673,7 +673,7 @@ const LandingPage = () => {
                       <div className="text-gray-700 space-y-1">
                         {Object.entries(BUSINESS_HOURS).map(([day, hours], index) => (
                           <p key={index} className={day === 'Monday' ? "font-medium" : ""}>
-                            <span className={day === 'Sunday' ? "text-primary" : ""}>{day}:</span> {hours}
+                            <span className={day === 'Sunday' ? "text-teal-600" : ""}>{day}:</span> {hours}
                           </p>
                         ))}
                       </div>
@@ -684,7 +684,7 @@ const LandingPage = () => {
               
               {/* Map */}
               <div className="relative">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/30 to-[#D4AF37]/30 rounded-xl blur-sm"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-500/30 to-teal-400/30 rounded-xl blur-sm"></div>
                 <div className="relative rounded-xl overflow-hidden shadow-lg">
                   <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.8704382280206!2d-93.28978668446308!3d44.94868137909837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87fc2bab9b830ca3%3A0x3f0eb9e78f9c0ce7!2s3013%20Pillsbury%20Ave%2C%20Minneapolis%2C%20MN%2055408!5e0!3m2!1sen!2sus!4v1680298696419!5m2!1sen!2sus" 
@@ -702,9 +702,9 @@ const LandingPage = () => {
             {/* Contact Form */}
             <div className="lg:col-span-7">
               <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover-card-effect">
-                <h3 className="text-2xl font-bold text-primary mb-8 flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
-                    <Mail className="w-5 h-5 text-primary" />
+                <h3 className="text-2xl font-bold text-teal-700 mb-8 flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center mr-3">
+                    <Mail className="w-5 h-5 text-teal-600" />
                   </div>
                   Send Us a Message
                 </h3>
@@ -722,7 +722,7 @@ const LandingPage = () => {
                               <Input 
                                 placeholder="Your name" 
                                 {...field} 
-                                className="border-gray-300 focus:border-primary focus:ring-primary"
+                                className="border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                               />
                             </FormControl>
                           </FormItem>
@@ -739,7 +739,7 @@ const LandingPage = () => {
                               <Input 
                                 placeholder="Your email" 
                                 {...field} 
-                                className="border-gray-300 focus:border-primary focus:ring-primary"
+                                className="border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                               />
                             </FormControl>
                           </FormItem>
@@ -758,7 +758,7 @@ const LandingPage = () => {
                               <Input 
                                 placeholder="(612) 555-1234" 
                                 {...field} 
-                                className="border-gray-300 focus:border-primary focus:ring-primary"
+                                className="border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                               />
                             </FormControl>
                           </FormItem>
@@ -775,7 +775,7 @@ const LandingPage = () => {
                               <Input 
                                 placeholder="Year, Make, Model" 
                                 {...field} 
-                                className="border-gray-300 focus:border-primary focus:ring-primary"
+                                className="border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                               />
                             </FormControl>
                           </FormItem>
@@ -791,7 +791,7 @@ const LandingPage = () => {
                           <FormLabel className="text-gray-700">Service Needed</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger className="border-gray-300 focus:border-primary focus:ring-primary">
+                              <SelectTrigger className="border-gray-300 focus:border-teal-500 focus:ring-teal-500">
                                 <SelectValue placeholder="Select a service" />
                               </SelectTrigger>
                             </FormControl>
@@ -820,7 +820,7 @@ const LandingPage = () => {
                               placeholder="Tell us more about your repair needs..."
                               {...field}
                               rows={5}
-                              className="border-gray-300 focus:border-primary focus:ring-primary resize-none"
+                              className="border-gray-300 focus:border-teal-500 focus:ring-teal-500 resize-none"
                             />
                           </FormControl>
                         </FormItem>
@@ -836,7 +836,7 @@ const LandingPage = () => {
                             <Checkbox
                               checked={field.value || false}
                               onCheckedChange={field.onChange}
-                              className="data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                              className="data-[state=checked]:bg-teal-600 data-[state=checked]:border-teal-600"
                             />
                           </FormControl>
                           <div className="space-y-1 leading-none">
@@ -852,7 +852,7 @@ const LandingPage = () => {
                     <div className="pt-4">
                       <Button 
                         type="submit" 
-                        className="w-full bg-primary hover:bg-primary/90 text-lg py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                        className="w-full bg-teal-600 hover:bg-teal-700 text-lg py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                         disabled={contactMutation.isPending}
                       >
                         {contactMutation.isPending ? (
@@ -881,7 +881,7 @@ const LandingPage = () => {
         </div>
         
         {/* Final CTA */}
-        <div className="mt-20 bg-primary text-white py-10 relative">
+        <div className="mt-20 bg-teal-600 text-white py-10 relative">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="md:col-span-2">
@@ -891,7 +891,7 @@ const LandingPage = () => {
               <div className="text-right">
                 <a 
                   href={`tel:${COMPANY_PHONE.replace(/[^0-9]/g, '')}`}
-                  className="inline-flex items-center justify-center bg-white text-primary px-6 py-3 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="inline-flex items-center justify-center bg-white text-teal-700 px-6 py-3 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now

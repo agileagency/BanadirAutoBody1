@@ -739,7 +739,7 @@ const LandingPage = () => {
                               <Input 
                                 placeholder="Your email" 
                                 {...field} 
-                                className="border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                                className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                               />
                             </FormControl>
                           </FormItem>
@@ -758,7 +758,7 @@ const LandingPage = () => {
                               <Input 
                                 placeholder="(612) 555-1234" 
                                 {...field} 
-                                className="border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                                className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                               />
                             </FormControl>
                           </FormItem>
@@ -775,7 +775,7 @@ const LandingPage = () => {
                               <Input 
                                 placeholder="Year, Make, Model" 
                                 {...field} 
-                                className="border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                                className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                               />
                             </FormControl>
                           </FormItem>
@@ -791,7 +791,7 @@ const LandingPage = () => {
                           <FormLabel className="text-gray-700">Service Needed</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger className="border-gray-300 focus:border-teal-500 focus:ring-teal-500">
+                              <SelectTrigger className="border-gray-300 focus:border-orange-500 focus:ring-orange-500">
                                 <SelectValue placeholder="Select a service" />
                               </SelectTrigger>
                             </FormControl>
@@ -820,7 +820,7 @@ const LandingPage = () => {
                               placeholder="Tell us more about your repair needs..."
                               {...field}
                               rows={5}
-                              className="border-gray-300 focus:border-teal-500 focus:ring-teal-500 resize-none"
+                              className="border-gray-300 focus:border-orange-500 focus:ring-orange-500 resize-none"
                             />
                           </FormControl>
                         </FormItem>
@@ -836,7 +836,7 @@ const LandingPage = () => {
                             <Checkbox
                               checked={field.value || false}
                               onCheckedChange={field.onChange}
-                              className="data-[state=checked]:bg-teal-600 data-[state=checked]:border-teal-600"
+                              className="data-[state=checked]:bg-orange-600 data-[state=checked]:border-orange-600"
                             />
                           </FormControl>
                           <div className="space-y-1 leading-none">
@@ -852,7 +852,7 @@ const LandingPage = () => {
                     <div className="pt-4">
                       <Button 
                         type="submit" 
-                        className="w-full bg-teal-600 hover:bg-teal-700 text-lg py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                        className="w-full bg-orange-600 hover:bg-orange-700 text-lg py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                         disabled={contactMutation.isPending}
                       >
                         {contactMutation.isPending ? (
@@ -881,7 +881,7 @@ const LandingPage = () => {
         </div>
         
         {/* Final CTA */}
-        <div className="mt-20 bg-teal-600 text-white py-10 relative">
+        <div className="mt-20 bg-orange-600 text-white py-10 relative">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="md:col-span-2">
@@ -891,7 +891,7 @@ const LandingPage = () => {
               <div className="text-right">
                 <a 
                   href={`tel:${COMPANY_PHONE.replace(/[^0-9]/g, '')}`}
-                  className="inline-flex items-center justify-center bg-white text-teal-700 px-6 py-3 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="inline-flex items-center justify-center bg-white text-orange-700 px-6 py-3 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now

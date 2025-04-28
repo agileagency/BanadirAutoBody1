@@ -306,7 +306,10 @@ const LandingPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">Insurance <span className="text-primary">Partners</span></h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We work with all major insurance companies to make your repair process smooth and hassle-free.
+              We accept <span className="font-bold">ALL</span> insurance companies and have experts on staff who specialize in handling claims to make your repair process completely hassle-free.
+            </p>
+            <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
+              Our team handles the entire insurance process from start to finish, including direct communication with adjusters, detailed documentation, and ensuring proper coverage for all repairs.
             </p>
           </div>
           

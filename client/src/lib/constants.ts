@@ -48,13 +48,6 @@ export const SERVICES = [
     description: "Expert windshield and auto glass repair and replacement services for all vehicle makes and models.",
     icon: "fa-window-restore",
     image: "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2luZHNoaWVsZCUyMHJlcGxhY2VtZW50fGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    id: "detailing",
-    name: "Detailing Services",
-    description: "Premium detailing services to restore your vehicle's appearance inside and out after repairs.",
-    icon: "fa-car",
-    image: "https://images.unsplash.com/photo-1581289789902-ab81bc594566?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyJTIwcmVzdG9yYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=80"
   }
 ];
 
@@ -65,11 +58,7 @@ export const FEATURES = [
     description: "Our technicians are fully certified and continuously trained on the latest repair techniques and technologies.",
     icon: "fa-certificate"
   },
-  {
-    title: "State-of-the-Art Equipment",
-    description: "We invest in the latest diagnostic and repair equipment to ensure your vehicle receives the best service possible.",
-    icon: "fa-tools"
-  },
+
   {
     title: "Quality Guarantee",
     description: "We stand behind our work with comprehensive repair guarantees for your peace of mind.",
@@ -77,8 +66,13 @@ export const FEATURES = [
   },
   {
     title: "Insurance Coordination",
-    description: "We work with all insurance providers and handle the claims process to make your repair experience stress-free.",
+    description: "We work with ALL insurance providers and handle every aspect of the claims process. From initial assessment to final approval, we make the entire experience stress-free with direct communication with adjusters.",
     icon: "fa-file-invoice-dollar"
+  },
+  {
+    title: "Insurance Experts",
+    description: "Our dedicated insurance specialists have years of experience working with all major insurance companies. We know exactly how to navigate the claims process to ensure your repairs are fully covered.",
+    icon: "fa-shield-alt"
   },
   {
     title: "Quick Turnaround",
@@ -169,30 +163,48 @@ export const INSURANCE_COMPANIES = [
   "Liberty Mutual",
   "Farmers",
   "USAA",
-  "Nationwide"
+  "Nationwide",
+  "American Family",
+  "Travelers",
+  "Erie Insurance",
+  "The Hartford",
+  "Mercury",
+  "Amica",
+  "Auto-Owners",
+  "MetLife"
 ];
 
 // Insurance process steps
 export const INSURANCE_PROCESS = [
   {
     step: 1,
-    title: "Initial Assessment",
-    description: "We provide a detailed damage assessment and documentation for your claim."
+    title: "Free Initial Assessment",
+    description: "We provide a comprehensive damage assessment with detailed documentation and photographs for your insurance claim, all at no cost to you."
   },
   {
     step: 2,
-    title: "Insurance Coordination",
-    description: "We work directly with your insurance adjuster to agree on repairs."
+    title: "Direct Insurance Communication",
+    description: "Our insurance specialists work directly with your adjuster to approve the full scope of repairs needed, negotiate on your behalf, and manage all paperwork."
   },
   {
     step: 3,
-    title: "Quality Repairs",
-    description: "We complete all repairs to manufacturer specifications."
+    title: "Deductible Assistance",
+    description: "We offer flexible payment options for deductibles and can advise on situations where deductibles might be waived, depending on your policy."
   },
   {
     step: 4,
-    title: "Final Inspection",
-    description: "We ensure all work meets our quality standards before returning your vehicle."
+    title: "OEM-Certified Repairs",
+    description: "We complete all repairs using Original Equipment Manufacturer parts when specified by your policy, ensuring your vehicle warranty remains valid."
+  },
+  {
+    step: 5,
+    title: "Supplemental Claims Handling",
+    description: "If additional damage is discovered during repairs, we handle all supplemental insurance claims so you don't have to worry about unexpected costs."
+  },
+  {
+    step: 6,
+    title: "Final Quality Inspection",
+    description: "Before returning your vehicle, we perform a comprehensive inspection to ensure all repairs meet both our high-quality standards and your insurance requirements."
   }
 ];
 

@@ -247,7 +247,7 @@ const LandingPage = () => {
                   
                   {/* Hover action */}
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <a href="#contact" className="inline-flex items-center text-teal-500 font-semibold">
+                    <a href="#contact" className="inline-flex items-center text-orange-500 font-semibold">
                       Request Service
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -262,13 +262,13 @@ const LandingPage = () => {
                   
                   {/* Service features */}
                   <div className="flex flex-wrap gap-2 mb-5">
-                    <span className="bg-teal-50 text-teal-700 text-sm px-3 py-1 rounded-full">
+                    <span className="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">
                       Expert Technicians
                     </span>
-                    <span className="bg-teal-50 text-teal-700 text-sm px-3 py-1 rounded-full">
+                    <span className="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">
                       Quality Materials
                     </span>
-                    <span className="bg-teal-50 text-teal-700 text-sm px-3 py-1 rounded-full">
+                    <span className="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">
                       Warranty Coverage
                     </span>
                   </div>
@@ -277,7 +277,7 @@ const LandingPage = () => {
                   <div className="pt-4 border-t border-gray-100">
                     <a 
                       href="#contact" 
-                      className="inline-flex items-center text-primary font-medium hover:text-teal-600 transition-colors"
+                      className="inline-flex items-center text-primary font-medium hover:text-orange-600 transition-colors"
                     >
                       Learn more about {service.name.toLowerCase()}
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -294,7 +294,7 @@ const LandingPage = () => {
           <div className="mt-16 text-center">
             <a 
               href="#contact" 
-              className="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+              className="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
               Request a Free Quote
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

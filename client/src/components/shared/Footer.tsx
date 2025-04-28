@@ -36,7 +36,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold font-['Montserrat'] mb-6">
-              <span className="text-teal-500">BANADIR</span> AUTO BODY
+              <span className="text-orange-500">BANADIR</span> AUTO BODY
             </h3>
             <p className="text-white/90 mb-6">
               Minneapolis' trusted auto body shop providing quality repairs and exceptional customer service since {COMPANY_FOUNDED}.
@@ -45,13 +45,13 @@ const Footer = () => {
             {/* Social Media */}
             <div className="flex space-x-4 mb-8">
               <a href="#" className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors duration-300">
-                <Facebook className="w-5 h-5 text-teal-400" />
+                <Facebook className="w-5 h-5 text-orange-400" />
               </a>
               <a href="#" className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors duration-300">
-                <Instagram className="w-5 h-5 text-teal-400" />
+                <Instagram className="w-5 h-5 text-orange-400" />
               </a>
               <a href="#" className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors duration-300">
-                <Twitter className="w-5 h-5 text-teal-400" />
+                <Twitter className="w-5 h-5 text-orange-400" />
               </a>
             </div>
             
@@ -85,31 +85,31 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-6 relative inline-block">
               Quick Links
-              <div className="absolute left-0 -bottom-1 w-1/2 h-0.5 bg-teal-500/80"></div>
+              <div className="absolute left-0 -bottom-1 w-1/2 h-0.5 bg-orange-500/80"></div>
             </h3>
             <div className="grid grid-cols-1 gap-y-3">
-              <a href="#home" className="text-white/80 hover:text-teal-400 transition-colors duration-300 flex items-center group">
-                <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
+              <a href="#home" className="text-white/80 hover:text-orange-400 transition-colors duration-300 flex items-center group">
+                <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
                 Home
               </a>
-              <a href="#services" className="text-white/80 hover:text-teal-400 transition-colors duration-300 flex items-center group">
-                <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
+              <a href="#services" className="text-white/80 hover:text-orange-400 transition-colors duration-300 flex items-center group">
+                <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
                 Services
               </a>
-              <a href="#gallery" className="text-white/80 hover:text-teal-400 transition-colors duration-300 flex items-center group">
-                <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
+              <a href="#gallery" className="text-white/80 hover:text-orange-400 transition-colors duration-300 flex items-center group">
+                <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
                 Gallery
               </a>
-              <a href="#testimonials" className="text-white/80 hover:text-teal-400 transition-colors duration-300 flex items-center group">
-                <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
+              <a href="#testimonials" className="text-white/80 hover:text-orange-400 transition-colors duration-300 flex items-center group">
+                <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
                 Testimonials
               </a>
-              <a href="#insurance" className="text-white/80 hover:text-teal-400 transition-colors duration-300 flex items-center group">
-                <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
+              <a href="#insurance" className="text-white/80 hover:text-orange-400 transition-colors duration-300 flex items-center group">
+                <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
                 Insurance
               </a>
-              <a href="#contact" className="text-white/80 hover:text-teal-400 transition-colors duration-300 flex items-center group">
-                <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
+              <a href="#contact" className="text-white/80 hover:text-orange-400 transition-colors duration-300 flex items-center group">
+                <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 group-hover:scale-125 transition-all duration-300"></div>
                 Contact
               </a>
             </div>

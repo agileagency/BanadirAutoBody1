@@ -15,6 +15,7 @@ import {
   GALLERY_ITEMS,
   TESTIMONIALS,
   INSURANCE_COMPANIES,
+  INSURANCE_PROCESS,
   STATS
 } from '@/lib/constants';
 
@@ -313,6 +314,26 @@ const LandingPage = () => {
             </p>
           </div>
           
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center mb-10">Our Insurance Process</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {INSURANCE_PROCESS.map((step: { step: number; title: string; description: string }) => (
+                <div key={step.step} className="bg-white rounded-lg shadow-md p-6 border-t-4 border-primary">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white text-xl font-bold mb-4">
+                    {step.step}
+                  </div>
+                  <h4 className="text-xl font-bold mb-3">{step.title}</h4>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold text-center mb-6">We Work With All Insurance Companies</h3>
+            <p className="text-center mb-10 max-w-3xl mx-auto">Including but not limited to the following providers:</p>
+          </div>
+          
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
             {INSURANCE_COMPANIES.map((company, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md p-4 flex items-center justify-center h-24">
@@ -480,6 +501,7 @@ const LandingPage = () => {
                             <SelectItem value="Dent Removal">Dent Removal</SelectItem>
                             <SelectItem value="Frame Straightening">Frame Straightening</SelectItem>
                             <SelectItem value="Glass Replacement">Glass Replacement</SelectItem>
+                            <SelectItem value="Insurance Claim">Insurance Claim</SelectItem>
                             <SelectItem value="Other">Other</SelectItem>
                           </SelectContent>
                         </Select>

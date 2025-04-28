@@ -335,26 +335,55 @@ const LandingPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50" id="testimonials">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-primary relative overflow-hidden" id="testimonials">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-5">
+          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="quote-pattern" patternUnits="userSpaceOnUse" width="80" height="80">
+                <text x="10" y="50" className="text-5xl text-white" fill="currentColor" opacity="0.1">❝</text>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#quote-pattern)" />
+          </svg>
+        </div>
+        
+        <div className="absolute top-10 right-10 w-40 h-40 bg-[#D4AF37]/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-[#D4AF37]/20 rounded-full filter blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">What Our <span className="text-primary">Customers Say</span></h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it—hear from our satisfied customers.
+            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 py-1 text-white font-medium mb-4">CUSTOMER TESTIMONIALS</div>
+            <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6 text-white">
+              What Our <span className="text-[#D4AF37] relative inline-block">
+                Customers Say
+                <div className="absolute left-0 -bottom-2 w-full h-1 bg-[#D4AF37]/40"></div>
+              </span>
+            </h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Don't just take our word for it—hear from our satisfied customers who've experienced our premium auto body services.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {TESTIMONIALS.slice(0, 3).map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-8">
-                <div className="flex justify-center mb-4">
+              <div 
+                key={index} 
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover-card-effect relative overflow-hidden group"
+              >
+                {/* Quote mark decoration */}
+                <div className="absolute -top-2 -right-2 text-[#D4AF37]/20 text-9xl font-serif transform -rotate-6">❝</div>
+                
+                <div className="flex mb-6">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-[#D4AF37] mx-0.5">★</span>
                   ))}
                 </div>
-                <p className="text-gray-600 italic mb-6">"{testimonial.content}"</p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4">
+                
+                <p className="text-white italic mb-8 relative z-10 leading-relaxed">"{testimonial.content}"</p>
+                
+                <div className="flex items-center relative z-10">
+                  <div className="w-14 h-14 bg-gray-300 rounded-full overflow-hidden mr-4 ring-2 ring-[#D4AF37] ring-offset-2 ring-offset-primary">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.author} 
@@ -362,12 +391,58 @@ const LandingPage = () => {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold">{testimonial.author}</h4>
-                    <p className="text-sm text-gray-500">{testimonial.location}</p>
+                    <h4 className="font-bold text-white text-lg">{testimonial.author}</h4>
+                    <p className="text-[#D4AF37]">{testimonial.location}</p>
                   </div>
                 </div>
+                
+                {/* Hover effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800 opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
               </div>
             ))}
+          </div>
+          
+          {/* Social proof */}
+          <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">4.9/5</div>
+                <div className="flex justify-center mb-1">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-[#D4AF37] mx-0.5 text-lg">★</span>
+                  ))}
+                </div>
+                <p className="text-white/80">Google Reviews</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">5/5</div>
+                <div className="flex justify-center mb-1">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-[#D4AF37] mx-0.5 text-lg">★</span>
+                  ))}
+                </div>
+                <p className="text-white/80">Facebook</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">4.8/5</div>
+                <div className="flex justify-center mb-1">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-[#D4AF37] mx-0.5 text-lg">★</span>
+                  ))}
+                </div>
+                <p className="text-white/80">Yelp</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">A+</div>
+                <div className="flex justify-center mb-1">
+                  <span className="text-[#D4AF37] font-bold">BBB</span>
+                </div>
+                <p className="text-white/80">Accredited Business</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -507,61 +582,99 @@ const LandingPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white" id="contact">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden" id="contact">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-full h-32 bg-primary/5 opacity-50 transform -skew-y-6"></div>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-primary/5 opacity-50 transform skew-y-6"></div>
+        
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full filter blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">Contact <span className="text-primary">Us</span></h2>
+            <div className="inline-block bg-primary/10 rounded-full px-4 py-1 text-primary font-medium mb-4">GET IN TOUCH</div>
+            <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6 text-shadow">
+              Contact <span className="text-primary relative inline-block">
+                Our Team
+                <div className="absolute left-0 -bottom-2 w-full h-1 bg-[#D4AF37]/40"></div>
+              </span>
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Request a quote or schedule a repair. We're here to help with all your auto body repair needs.
+              Request a quote, schedule a repair, or get insurance assistance. We're here to help with all your auto body repair needs.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Contact Info */}
-            <div className="space-y-8">
-              <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold text-primary mb-6">Get In Touch</h3>
+            <div className="space-y-8 lg:col-span-5">
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover-card-effect">
+                <h3 className="text-2xl font-bold text-primary mb-8 flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
+                  How to Reach Us
+                </h3>
                 
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="bg-primary text-white p-3 rounded-full mr-4">
+                <div className="space-y-8">
+                  <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                    <div className="bg-primary/10 text-primary p-3 rounded-lg mr-4">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Location</h4>
-                      <p className="text-gray-600">{COMPANY_ADDRESS}</p>
+                      <h4 className="font-bold mb-1 text-lg">Location</h4>
+                      <p className="text-gray-700">{COMPANY_ADDRESS}</p>
+                      <a href="https://maps.google.com/?q=3013+Pillsbury+Ave+Minneapolis+MN+55408" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 text-sm flex items-center mt-2">
+                        Get Directions
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </a>
                     </div>
                   </div>
                   
-                  <div className="flex items-start">
-                    <div className="bg-primary text-white p-3 rounded-full mr-4">
+                  <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                    <div className="bg-primary/10 text-primary p-3 rounded-lg mr-4">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Phone</h4>
-                      <p className="text-gray-600">{COMPANY_PHONE}</p>
+                      <h4 className="font-bold mb-1 text-lg">Phone</h4>
+                      <p className="text-gray-700">{COMPANY_PHONE}</p>
+                      <a href={`tel:${COMPANY_PHONE.replace(/[^0-9]/g, '')}`} className="text-primary hover:text-primary/80 text-sm flex items-center mt-2">
+                        Call Us Now
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                      </a>
                     </div>
                   </div>
                   
-                  <div className="flex items-start">
-                    <div className="bg-primary text-white p-3 rounded-full mr-4">
+                  <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                    <div className="bg-primary/10 text-primary p-3 rounded-lg mr-4">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Email</h4>
-                      <p className="text-gray-600">{COMPANY_EMAIL}</p>
+                      <h4 className="font-bold mb-1 text-lg">Email</h4>
+                      <p className="text-gray-700">{COMPANY_EMAIL}</p>
+                      <a href={`mailto:${COMPANY_EMAIL}`} className="text-primary hover:text-primary/80 text-sm flex items-center mt-2">
+                        Send Email
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </a>
                     </div>
                   </div>
                   
-                  <div className="flex items-start">
-                    <div className="bg-primary text-white p-3 rounded-full mr-4">
+                  <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
+                    <div className="bg-primary/10 text-primary p-3 rounded-lg mr-4">
                       <Clock className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Business Hours</h4>
-                      <div className="text-gray-600 space-y-1">
+                      <h4 className="font-bold mb-1 text-lg">Business Hours</h4>
+                      <div className="text-gray-700 space-y-1">
                         {Object.entries(BUSINESS_HOURS).map(([day, hours], index) => (
-                          <p key={index}>{day}: {hours}</p>
+                          <p key={index} className={day === 'Monday' ? "font-medium" : ""}>
+                            <span className={day === 'Sunday' ? "text-primary" : ""}>{day}:</span> {hours}
+                          </p>
                         ))}
                       </div>
                     </div>
@@ -570,34 +683,145 @@ const LandingPage = () => {
               </div>
               
               {/* Map */}
-              <div className="rounded-lg overflow-hidden shadow-md h-64 lg:h-80">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.8704382280206!2d-93.28978668446308!3d44.94868137909837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87fc2bab9b830ca3%3A0x3f0eb9e78f9c0ce7!2s3013%20Pillsbury%20Ave%2C%20Minneapolis%2C%20MN%2055408!5e0!3m2!1sen!2sus!4v1680298696419!5m2!1sen!2sus" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Banadir Auto Body Shop location"
-                ></iframe>
+              <div className="relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/30 to-[#D4AF37]/30 rounded-xl blur-sm"></div>
+                <div className="relative rounded-xl overflow-hidden shadow-lg">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.8704382280206!2d-93.28978668446308!3d44.94868137909837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87fc2bab9b830ca3%3A0x3f0eb9e78f9c0ce7!2s3013%20Pillsbury%20Ave%2C%20Minneapolis%2C%20MN%2055408!5e0!3m2!1sen!2sus!4v1680298696419!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="300" 
+                    style={{ border: 0 }} 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Banadir Auto Body Shop location"
+                  ></iframe>
+                </div>
               </div>
             </div>
             
             {/* Contact Form */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold text-primary mb-6">Send Us a Message</h3>
-              
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="lg:col-span-7">
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover-card-effect">
+                <h3 className="text-2xl font-bold text-primary mb-8 flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                    <Mail className="w-5 h-5 text-primary" />
+                  </div>
+                  Send Us a Message
+                </h3>
+                
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-gray-700">Full Name</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="Your name" 
+                                {...field} 
+                                className="border-gray-300 focus:border-primary focus:ring-primary"
+                              />
+                            </FormControl>
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-gray-700">Email Address</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="Your email" 
+                                {...field} 
+                                className="border-gray-300 focus:border-primary focus:ring-primary"
+                              />
+                            </FormControl>
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-gray-700">Phone Number</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="(612) 555-1234" 
+                                {...field} 
+                                className="border-gray-300 focus:border-primary focus:ring-primary"
+                              />
+                            </FormControl>
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <FormField
+                        control={form.control}
+                        name="vehicle"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-gray-700">Vehicle Details</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="Year, Make, Model" 
+                                {...field} 
+                                className="border-gray-300 focus:border-primary focus:ring-primary"
+                              />
+                            </FormControl>
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                    
                     <FormField
                       control={form.control}
-                      name="name"
+                      name="service"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Name</FormLabel>
+                          <FormLabel className="text-gray-700">Service Needed</FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger className="border-gray-300 focus:border-primary focus:ring-primary">
+                                <SelectValue placeholder="Select a service" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectItem value="Collision Repair">Collision Repair</SelectItem>
+                              <SelectItem value="Paint Services">Paint Services</SelectItem>
+                              <SelectItem value="Dent Removal">Dent Removal</SelectItem>
+                              <SelectItem value="Frame Straightening">Frame Straightening</SelectItem>
+                              <SelectItem value="Glass Replacement">Glass Replacement</SelectItem>
+                              <SelectItem value="Insurance Claim">Insurance Claim</SelectItem>
+                              <SelectItem value="Other">Other</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-gray-700">Your Message</FormLabel>
                           <FormControl>
-                            <Input placeholder="Your name" {...field} />
+                            <Textarea 
+                              placeholder="Tell us more about your repair needs..."
+                              {...field}
+                              rows={5}
+                              className="border-gray-300 focus:border-primary focus:ring-primary resize-none"
+                            />
                           </FormControl>
                         </FormItem>
                       )}
@@ -605,117 +829,74 @@ const LandingPage = () => {
                     
                     <FormField
                       control={form.control}
-                      name="email"
+                      name="insuranceHelp"
                       render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email</FormLabel>
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-gray-200 p-4 bg-gray-50">
                           <FormControl>
-                            <Input placeholder="Your email" {...field} />
+                            <Checkbox
+                              checked={field.value || false}
+                              onCheckedChange={field.onChange}
+                              className="data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                            />
                           </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="text-gray-700 font-medium">Need help with insurance?</FormLabel>
+                            <FormDescription className="text-gray-500">
+                              Check this if you need assistance with your insurance claim. Our insurance specialists will contact you.
+                            </FormDescription>
+                          </div>
                         </FormItem>
                       )}
                     />
-                  </div>
-                  
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Phone</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Your phone number" {...field} />
-                        </FormControl>
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="vehicle"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Vehicle Details</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Year, Make, Model" {...field} />
-                        </FormControl>
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="service"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Service Needed</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select a service" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="Collision Repair">Collision Repair</SelectItem>
-                            <SelectItem value="Paint Services">Paint Services</SelectItem>
-                            <SelectItem value="Dent Removal">Dent Removal</SelectItem>
-                            <SelectItem value="Frame Straightening">Frame Straightening</SelectItem>
-                            <SelectItem value="Glass Replacement">Glass Replacement</SelectItem>
-                            <SelectItem value="Insurance Claim">Insurance Claim</SelectItem>
-                            <SelectItem value="Other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl>
-                          <Textarea 
-                            placeholder="Tell us more about your repair needs"
-                            {...field}
-                            rows={4}
-                          />
-                        </FormControl>
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="insuranceHelp"
-                    render={({ field }) => (
-                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value || false}
-                            onCheckedChange={field.onChange}
-                          />
-                        </FormControl>
-                        <div className="space-y-1 leading-none">
-                          <FormLabel>Need help with insurance?</FormLabel>
-                          <FormDescription>
-                            Check this if you need assistance with your insurance claim.
-                          </FormDescription>
-                        </div>
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-primary hover:bg-primary/90"
-                    disabled={contactMutation.isPending}
-                  >
-                    {contactMutation.isPending ? "Submitting..." : "Submit Message"}
-                  </Button>
-                </form>
-              </Form>
+                    
+                    <div className="pt-4">
+                      <Button 
+                        type="submit" 
+                        className="w-full bg-primary hover:bg-primary/90 text-lg py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                        disabled={contactMutation.isPending}
+                      >
+                        {contactMutation.isPending ? (
+                          <span className="flex items-center">
+                            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            Submitting...
+                          </span>
+                        ) : (
+                          <span className="flex items-center justify-center">
+                            Submit Message
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                          </span>
+                        )}
+                      </Button>
+                    </div>
+                  </form>
+                </Form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Final CTA */}
+        <div className="mt-20 bg-primary text-white py-10 relative">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-3 gap-8 items-center">
+              <div className="md:col-span-2">
+                <h3 className="text-2xl font-bold mb-2">Ready to get your vehicle repaired?</h3>
+                <p className="text-white/90">Contact us today to schedule your appointment or get a free quote.</p>
+              </div>
+              <div className="text-right">
+                <a 
+                  href={`tel:${COMPANY_PHONE.replace(/[^0-9]/g, '')}`}
+                  className="inline-flex items-center justify-center bg-white text-primary px-6 py-3 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now
+                </a>
+              </div>
             </div>
           </div>
         </div>

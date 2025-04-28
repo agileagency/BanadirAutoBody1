@@ -50,15 +50,15 @@ const Header = () => {
         <div className="flex items-center">
           <a href="#home" className="flex items-center" onClick={closeMobileMenu}>
             <span className={`${scrolled ? 'text-xl' : 'text-2xl'} font-bold font-['Montserrat'] tracking-tight transition-all duration-300`}>
-              <span className="text-[#D4AF37]">BANADIR</span> AUTO BODY
+              <span className="text-teal-600">BANADIR</span> AUTO BODY
             </span>
           </a>
         </div>
 
         {/* Contact Info - Desktop */}
         <div className="hidden md:flex items-center mr-6">
-          <div className="bg-[#D4AF37]/20 px-4 py-2 rounded-full flex items-center">
-            <Phone className="text-[#D4AF37] w-4 h-4 mr-2" />
+          <div className="bg-teal-600/20 px-4 py-2 rounded-full flex items-center">
+            <Phone className="text-teal-600 w-4 h-4 mr-2" />
             <span className="text-white font-semibold">(612) 555-1234</span>
           </div>
         </div>
@@ -67,7 +67,7 @@ const Header = () => {
         <div className="lg:hidden">
           <button 
             onClick={toggleMobileMenu} 
-            className="text-white bg-primary/80 hover:bg-[#D4AF37]/20 p-2 rounded-md focus:outline-none transition-colors"
+            className="text-white bg-primary/80 hover:bg-teal-600/20 p-2 rounded-md focus:outline-none transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (

@@ -1,31 +1,10 @@
-import { Link } from 'wouter';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Testimonials', path: '/testimonials' },
-    { name: 'Insurance', path: '/insurance' },
-    { name: 'Contact', path: '/contact' }
-  ];
-  
-  const services = [
-    { name: 'Collision Repair', path: '/services#collision' },
-    { name: 'Paint Services', path: '/services#paint' },
-    { name: 'Frame Straightening', path: '/services#frame' },
-    { name: 'Dent Repair', path: '/services#dent' },
-    { name: 'Auto Glass', path: '/services#glass' },
-    { name: 'Detailing', path: '/services#detailing' }
-  ];
 
   return (
     <footer className="bg-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <h3 className="text-xl font-bold font-['Montserrat'] mb-6">Banadir Auto Body</h3>
             <p className="opacity-90 mb-6">
@@ -45,32 +24,6 @@ const Footer = () => {
                 <i className="fab fa-yelp"></i>
               </a>
             </div>
-          </div>
-          
-          <div>
-            <h3 className="text-xl font-bold font-['Montserrat'] mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link href={link.path}>
-                    <a className="opacity-90 hover:opacity-100 hover:text-[#D4AF37]">{link.name}</a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-xl font-bold font-['Montserrat'] mb-6">Services</h3>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link href={service.path}>
-                    <a className="opacity-90 hover:opacity-100 hover:text-[#D4AF37]">{service.name}</a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
           
           <div>

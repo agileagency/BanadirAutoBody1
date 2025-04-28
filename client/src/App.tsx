@@ -3,27 +3,36 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
-import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
-import Home from "@/pages/Home";
-import Services from "@/pages/Services";
-import About from "@/pages/About";
-import Gallery from "@/pages/Gallery";
-import Testimonials from "@/pages/Testimonials";
-import Insurance from "@/pages/Insurance";
-import Contact from "@/pages/Contact";
 import Admin from "@/pages/Admin";
+import LandingPage from "@/pages/LandingPage";
+
+// Simple header for admin page only
+import { Link } from "wouter";
+
+const AdminHeader = () => {
+  return (
+    <header className="bg-primary text-white py-4">
+      <div className="container mx-auto px-4 flex justify-between items-center">
+        <Link href="/">
+          <span className="text-2xl font-bold font-['Montserrat'] tracking-tight cursor-pointer">
+            <span className="text-[#D4AF37]">BANADIR</span> AUTO BODY
+          </span>
+        </Link>
+        <Link href="/">
+          <span className="text-white hover:text-[#D4AF37] cursor-pointer">
+            Back to Main Site
+          </span>
+        </Link>
+      </div>
+    </header>
+  );
+};
 
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/services" component={Services} />
-      <Route path="/about" component={About} />
-      <Route path="/gallery" component={Gallery} />
-      <Route path="/testimonials" component={Testimonials} />
-      <Route path="/insurance" component={Insurance} />
-      <Route path="/contact" component={Contact} />
+      <Route path="/" component={LandingPage} />
       <Route path="/admin" component={Admin} />
       <Route component={NotFound} />
     </Switch>
@@ -34,11 +43,19 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex flex-col min-h-screen">
-        <Header />
+        {/* Custom routing for header */}
+        <Route path="/admin">
+          <AdminHeader />
+        </Route>
+        
         <main className="flex-grow">
           <Router />
         </main>
-        <Footer />
+        
+        {/* Footer on main page only, not on admin */}
+        <Route path="/">
+          <Footer />
+        </Route>
       </div>
       <Toaster />
     </QueryClientProvider>

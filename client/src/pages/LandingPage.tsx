@@ -122,14 +122,14 @@ const LandingPage = () => {
         <div className="container mx-auto px-4 h-full flex items-center relative z-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white">
-              <div className="inline-block bg-primary/30 backdrop-blur-sm px-4 py-2 rounded-lg mb-6 border-l-4 border-[#D4AF37] animate-fade-in-right">
-                <span className="text-[#D4AF37] font-semibold">Minneapolis, MN</span>
+              <div className="inline-block bg-teal-600/20 backdrop-blur-sm px-4 py-2 rounded-lg mb-6 border-l-4 border-teal-600 animate-fade-in-right">
+                <span className="text-teal-600 font-semibold">Minneapolis, MN</span>
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-['Montserrat'] leading-tight mb-6 animate-fade-in-up">
-                Minneapolis' <span className="text-[#D4AF37] inline-block relative">
+                Minneapolis' <span className="text-teal-600 inline-block relative">
                   Premier
                   <svg className="absolute -bottom-3 left-0 w-full" viewBox="0 0 100 12" width="100%" height="12">
-                    <path d="M0,5 Q50,10 100,5 T200,5" fill="none" stroke="#D4AF37" strokeWidth="3" />
+                    <path d="M0,5 Q50,10 100,5 T200,5" fill="none" stroke="currentColor" strokeWidth="3" />
                   </svg>
                 </span> Auto Body Shop
               </h1>
@@ -137,13 +137,13 @@ const LandingPage = () => {
                 Expert repairs for all vehicle types with a commitment to quality and customer satisfaction.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up animation-delay-500">
-                <a href="#contact" className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-primary px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 group">
+                <a href="#contact" className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 group">
                   Schedule Repair
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 inline-block ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </a>
-                <a href="#services" className="border-2 border-white hover:border-[#D4AF37] hover:text-[#D4AF37] hover:bg-white/5 text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center backdrop-blur-sm">
+                <a href="#services" className="border-2 border-white hover:border-teal-400 hover:text-teal-400 hover:bg-white/5 text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center backdrop-blur-sm">
                   Our Services
                 </a>
               </div>
@@ -151,15 +151,15 @@ const LandingPage = () => {
               {/* Trust Indicators */}
               <div className="flex flex-wrap items-center mt-12 gap-8 animate-fade-in-up animation-delay-700">
                 <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <Shield className="text-[#D4AF37] w-6 h-6 mr-3" />
+                  <Shield className="text-teal-500 w-6 h-6 mr-3" />
                   <span className="text-lg">Certified Technicians</span>
                 </div>
                 <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <CheckCircle className="text-[#D4AF37] w-6 h-6 mr-3" />
+                  <CheckCircle className="text-teal-500 w-6 h-6 mr-3" />
                   <span className="text-lg">Quality Guaranteed</span>
                 </div>
                 <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <DollarSign className="text-[#D4AF37] w-6 h-6 mr-3" />
+                  <DollarSign className="text-teal-500 w-6 h-6 mr-3" />
                   <span className="text-lg">All Insurance Accepted</span>
                 </div>
               </div>
@@ -167,16 +167,16 @@ const LandingPage = () => {
             
             {/* Right side decorative element */}
             <div className="hidden md:block relative">
-              <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-[#D4AF37]/30 to-[#D4AF37]/0 rounded-full filter blur-2xl opacity-70 animate-pulse"></div>
+              <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-teal-500/30 to-teal-500/0 rounded-full filter blur-2xl opacity-70 animate-pulse"></div>
               <div className="relative bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="text-white text-lg mb-4">10+ Years of Excellence</div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-primary/40 p-4 rounded-lg text-center">
-                    <div className="text-3xl font-bold text-[#D4AF37]">2,500+</div>
+                    <div className="text-3xl font-bold text-teal-400">2,500+</div>
                     <div className="text-white/90 text-sm">Vehicles Repaired</div>
                   </div>
                   <div className="bg-primary/40 p-4 rounded-lg text-center">
-                    <div className="text-3xl font-bold text-[#D4AF37]">100%</div>
+                    <div className="text-3xl font-bold text-teal-400">100%</div>
                     <div className="text-white/90 text-sm">Satisfaction</div>
                   </div>
                   <div className="bg-primary/40 p-4 rounded-lg text-center col-span-2">
@@ -190,7 +190,7 @@ const LandingPage = () => {
         
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce hidden md:block">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>

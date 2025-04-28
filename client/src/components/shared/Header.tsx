@@ -87,13 +87,13 @@ const Header = () => {
           {navItems.map((item) => (
             item.isButton ? (
               <a key={item.name} href={item.path} onClick={closeMobileMenu}>
-                <span className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-primary px-5 py-2 rounded-md font-bold transition cursor-pointer inline-block shadow-md hover:shadow-lg">
+                <span className="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-md font-bold transition cursor-pointer inline-block shadow-md hover:shadow-lg">
                   {item.name}
                 </span>
               </a>
             ) : (
               <a key={item.name} href={item.path} onClick={closeMobileMenu}>
-                <span className={`text-white hover:text-[#D4AF37] font-semibold transition cursor-pointer relative after:absolute after:w-0 after:h-0.5 after:bg-[#D4AF37] after:left-0 after:-bottom-1 hover:after:w-full after:transition-all after:duration-300`}>
+                <span className={`text-white hover:text-teal-400 font-semibold transition cursor-pointer relative after:absolute after:w-0 after:h-0.5 after:bg-teal-400 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all after:duration-300`}>
                   {item.name}
                 </span>
               </a>
@@ -103,7 +103,7 @@ const Header = () => {
           {/* Admin Link */}
           <div className="border-l border-white/30 pl-4">
             <Link href={adminLink.path} onClick={closeMobileMenu}>
-              <span className="text-white/70 hover:text-[#D4AF37] font-semibold transition cursor-pointer">
+              <span className="text-white/70 hover:text-teal-400 font-semibold transition cursor-pointer">
                 {adminLink.name}
               </span>
             </Link>
@@ -117,8 +117,8 @@ const Header = () => {
           {navItems.map((item) => (
             <a key={item.name} href={item.path} onClick={closeMobileMenu}>
               <span className={item.isButton 
-                ? "bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-primary px-5 py-2 rounded-md inline-block font-bold transition text-center w-full cursor-pointer shadow-md" 
-                : `text-white hover:text-[#D4AF37] py-2 font-semibold transition cursor-pointer block border-b border-white/10 pb-2`}>
+                ? "bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-md inline-block font-bold transition text-center w-full cursor-pointer shadow-md" 
+                : `text-white hover:text-teal-400 py-2 font-semibold transition cursor-pointer block border-b border-white/10 pb-2`}>
                 {item.name}
               </span>
             </a>
@@ -127,7 +127,7 @@ const Header = () => {
           {/* Admin Link for Mobile */}
           <div className="pt-2">
             <Link href={adminLink.path} onClick={closeMobileMenu}>
-              <span className="text-white/70 hover:text-[#D4AF37] py-2 font-semibold transition cursor-pointer block">
+              <span className="text-white/70 hover:text-teal-400 py-2 font-semibold transition cursor-pointer block">
                 {adminLink.name}
               </span>
             </Link>

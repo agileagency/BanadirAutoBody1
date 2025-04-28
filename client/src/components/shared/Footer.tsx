@@ -36,7 +36,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold font-['Montserrat'] mb-6">
-              <span className="text-[#D4AF37]">BANADIR</span> AUTO BODY
+              <span className="text-teal-500">BANADIR</span> AUTO BODY
             </h3>
             <p className="text-white/90 mb-6">
               Minneapolis' trusted auto body shop providing quality repairs and exceptional customer service since {COMPANY_FOUNDED}.

@@ -633,7 +633,7 @@ const LandingPage = () => {
                   </div>
                   
                   <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
-                    <div className="bg-orange-50 text-orange-600 p-3 rounded-lg mr-4">
+                    <div className="bg-slate-100 text-slate-600 p-3 rounded-lg mr-4">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
@@ -649,7 +649,7 @@ const LandingPage = () => {
                   </div>
                   
                   <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
-                    <div className="bg-orange-50 text-orange-600 p-3 rounded-lg mr-4">
+                    <div className="bg-slate-100 text-slate-600 p-3 rounded-lg mr-4">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
@@ -665,7 +665,7 @@ const LandingPage = () => {
                   </div>
                   
                   <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
-                    <div className="bg-orange-50 text-orange-600 p-3 rounded-lg mr-4">
+                    <div className="bg-slate-100 text-slate-600 p-3 rounded-lg mr-4">
                       <Clock className="w-5 h-5" />
                     </div>
                     <div>

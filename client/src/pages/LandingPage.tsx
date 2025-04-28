@@ -608,16 +608,16 @@ const LandingPage = () => {
             {/* Contact Info */}
             <div className="space-y-8 lg:col-span-5">
               <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover-card-effect">
-                <h3 className="text-2xl font-bold text-orange-700 mb-8 flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center mr-3">
-                    <Phone className="w-5 h-5 text-orange-600" />
+                <h3 className="text-2xl font-bold text-slate-700 mb-8 flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center mr-3">
+                    <Phone className="w-5 h-5 text-slate-600" />
                   </div>
                   How to Reach Us
                 </h3>
                 
                 <div className="space-y-8">
                   <div className="flex items-start hover:bg-gray-50 p-3 rounded-lg transition-colors">
-                    <div className="bg-orange-50 text-orange-600 p-3 rounded-lg mr-4">
+                    <div className="bg-slate-100 text-slate-600 p-3 rounded-lg mr-4">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
@@ -881,7 +881,7 @@ const LandingPage = () => {
         </div>
         
         {/* Final CTA */}
-        <div className="mt-20 bg-orange-600 text-white py-10 relative">
+        <div className="mt-20 bg-slate-700 text-white py-10 relative">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="md:col-span-2">
@@ -891,7 +891,7 @@ const LandingPage = () => {
               <div className="text-right">
                 <a 
                   href={`tel:${COMPANY_PHONE.replace(/[^0-9]/g, '')}`}
-                  className="inline-flex items-center justify-center bg-white text-orange-700 px-6 py-3 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="inline-flex items-center justify-center bg-white text-slate-700 px-6 py-3 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now

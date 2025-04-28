@@ -309,7 +309,7 @@ const LandingPage = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">Why Choose <span className="text-teal-400">Banadir Auto</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">Why Choose <span className="text-orange-400">Banadir Auto</span></h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               We're committed to providing exceptional service and quality repairs for every vehicle.
             </p>
@@ -318,7 +318,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {FEATURES.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 transition-transform duration-300 hover:scale-105">
-                <div className="text-teal-400 text-3xl mb-4">
+                <div className="text-orange-400 text-3xl mb-4">
                   {feature.icon === 'award' && <Award className="w-12 h-12" />}
                   {feature.icon === 'tools' && <Wrench className="w-12 h-12" />}
                   {feature.icon === 'shield' && <Shield className="w-12 h-12" />}
@@ -348,16 +348,16 @@ const LandingPage = () => {
           </svg>
         </div>
         
-        <div className="absolute top-10 right-10 w-40 h-40 bg-teal-500/20 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-40 h-40 bg-teal-500/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-10 right-10 w-40 h-40 bg-orange-500/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-orange-500/20 rounded-full filter blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 py-1 text-white font-medium mb-4">CUSTOMER TESTIMONIALS</div>
             <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6 text-white">
-              What Our <span className="text-teal-400 relative inline-block">
+              What Our <span className="text-orange-400 relative inline-block">
                 Customers Say
-                <div className="absolute left-0 -bottom-2 w-full h-1 bg-teal-500/40"></div>
+                <div className="absolute left-0 -bottom-2 w-full h-1 bg-orange-500/40"></div>
               </span>
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -372,18 +372,18 @@ const LandingPage = () => {
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover-card-effect relative overflow-hidden group"
               >
                 {/* Quote mark decoration */}
-                <div className="absolute -top-2 -right-2 text-teal-500/20 text-9xl font-serif transform -rotate-6">❝</div>
+                <div className="absolute -top-2 -right-2 text-orange-500/20 text-9xl font-serif transform -rotate-6">❝</div>
                 
                 <div className="flex mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-teal-400 mx-0.5">★</span>
+                    <span key={i} className="text-orange-400 mx-0.5">★</span>
                   ))}
                 </div>
                 
                 <p className="text-white italic mb-8 relative z-10 leading-relaxed">"{testimonial.content}"</p>
                 
                 <div className="flex items-center relative z-10">
-                  <div className="w-14 h-14 bg-gray-300 rounded-full overflow-hidden mr-4 ring-2 ring-teal-500 ring-offset-2 ring-offset-primary">
+                  <div className="w-14 h-14 bg-gray-300 rounded-full overflow-hidden mr-4 ring-2 ring-orange-500 ring-offset-2 ring-offset-primary">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.author} 
@@ -392,7 +392,7 @@ const LandingPage = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white text-lg">{testimonial.author}</h4>
-                    <p className="text-teal-400">{testimonial.location}</p>
+                    <p className="text-orange-400">{testimonial.location}</p>
                   </div>
                 </div>
                 
@@ -409,7 +409,7 @@ const LandingPage = () => {
                 <div className="text-4xl font-bold text-white mb-2">4.9/5</div>
                 <div className="flex justify-center mb-1">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-teal-400 mx-0.5 text-lg">★</span>
+                    <span key={i} className="text-orange-400 mx-0.5 text-lg">★</span>
                   ))}
                 </div>
                 <p className="text-white/80">Google Reviews</p>
@@ -419,7 +419,7 @@ const LandingPage = () => {
                 <div className="text-4xl font-bold text-white mb-2">5/5</div>
                 <div className="flex justify-center mb-1">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-teal-400 mx-0.5 text-lg">★</span>
+                    <span key={i} className="text-orange-400 mx-0.5 text-lg">★</span>
                   ))}
                 </div>
                 <p className="text-white/80">Facebook</p>
@@ -429,7 +429,7 @@ const LandingPage = () => {
                 <div className="text-4xl font-bold text-white mb-2">4.8/5</div>
                 <div className="flex justify-center mb-1">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-teal-400 mx-0.5 text-lg">★</span>
+                    <span key={i} className="text-orange-400 mx-0.5 text-lg">★</span>
                   ))}
                 </div>
                 <p className="text-white/80">Yelp</p>
@@ -438,7 +438,7 @@ const LandingPage = () => {
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">A+</div>
                 <div className="flex justify-center mb-1">
-                  <span className="text-teal-400 font-bold">BBB</span>
+                  <span className="text-orange-400 font-bold">BBB</span>
                 </div>
                 <p className="text-white/80">Accredited Business</p>
               </div>
@@ -477,22 +477,22 @@ const LandingPage = () => {
         <div className="absolute top-0 left-0 -ml-20 -mt-20 w-80 h-80 bg-primary/5 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-0 right-0 -mr-20 -mb-20 w-80 h-80 bg-primary/5 rounded-full filter blur-3xl"></div>
         
-        <div className="absolute right-0 top-1/3 w-32 h-32 bg-teal-500/20 rounded-full filter blur-2xl"></div>
+        <div className="absolute right-0 top-1/3 w-32 h-32 bg-orange-500/20 rounded-full filter blur-2xl"></div>
         
         <div className="container mx-auto px-4 relative">
           <div className="text-center mb-16">
-            <div className="inline-block bg-teal-50 rounded-full px-4 py-1 text-teal-700 font-medium mb-4">NO HASSLE CLAIMS</div>
+            <div className="inline-block bg-orange-50 rounded-full px-4 py-1 text-orange-700 font-medium mb-4">NO HASSLE CLAIMS</div>
             <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6 text-shadow">
-              Insurance <span className="text-teal-600 relative inline-block">
+              Insurance <span className="text-orange-600 relative inline-block">
                 Claims Specialists
-                <div className="absolute left-0 -bottom-2 w-full h-1 bg-teal-400/40"></div>
+                <div className="absolute left-0 -bottom-2 w-full h-1 bg-orange-400/40"></div>
               </span>
             </h2>
             <div className="flex flex-col items-center justify-center">
               <p className="text-xl text-gray-700 max-w-3xl">
-                We accept <span className="font-extrabold text-teal-600">ALL</span> insurance companies and have dedicated experts who specialize in handling claims to make your repair process completely hassle-free.
+                We accept <span className="font-extrabold text-orange-600">ALL</span> insurance companies and have dedicated experts who specialize in handling claims to make your repair process completely hassle-free.
               </p>
-              <div className="w-24 h-1 bg-teal-200 rounded-full my-6"></div>
+              <div className="w-24 h-1 bg-orange-200 rounded-full my-6"></div>
               <p className="text-lg text-gray-600 max-w-3xl">
                 Our team handles the entire insurance process from start to finish, including direct communication with adjusters, detailed documentation, and ensuring proper coverage for all repairs.
               </p>
@@ -508,8 +508,8 @@ const LandingPage = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {INSURANCE_PROCESS.slice(0, 3).map((step: { step: number; title: string; description: string }) => (
-                <div key={step.step} className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-teal-500 hover-card-effect relative z-10">
-                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal-600 text-white text-xl font-bold shadow-lg border-4 border-white">
+                <div key={step.step} className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-orange-500 hover-card-effect relative z-10">
+                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-orange-600 text-white text-xl font-bold shadow-lg border-4 border-white">
                     {step.step}
                   </div>
                   <h4 className="text-xl font-bold mb-4 text-center pt-4">{step.title}</h4>
@@ -520,8 +520,8 @@ const LandingPage = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
               {INSURANCE_PROCESS.slice(3).map((step: { step: number; title: string; description: string }) => (
-                <div key={step.step} className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-teal-500 hover-card-effect relative z-10">
-                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal-600 text-white text-xl font-bold shadow-lg border-4 border-white">
+                <div key={step.step} className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-orange-500 hover-card-effect relative z-10">
+                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-orange-600 text-white text-xl font-bold shadow-lg border-4 border-white">
                     {step.step}
                   </div>
                   <h4 className="text-xl font-bold mb-4 text-center pt-4">{step.title}</h4>
@@ -534,8 +534,8 @@ const LandingPage = () => {
           {/* Insurance Companies */}
           <div className="bg-white rounded-2xl shadow-xl p-10 border border-gray-100">
             <div className="mb-10 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">We Work With <span className="text-teal-600">All Insurance Companies</span></h3>
-              <div className="w-20 h-1 bg-teal-500 mx-auto rounded-full mb-6"></div>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">We Work With <span className="text-orange-600">All Insurance Companies</span></h3>
+              <div className="w-20 h-1 bg-orange-500 mx-auto rounded-full mb-6"></div>
               <p className="text-gray-600 max-w-3xl mx-auto">
                 No matter which insurance provider you use, we have the expertise to handle your claim. Our team has established relationships with all major providers to ensure a smooth repair process.
               </p>
@@ -545,7 +545,7 @@ const LandingPage = () => {
               {INSURANCE_COMPANIES.map((company, index) => (
                 <div 
                   key={index} 
-                  className="bg-gray-50 hover:bg-teal-50 rounded-lg p-4 flex items-center justify-center h-24 transition-colors duration-300 border border-gray-100 shadow-sm hover:shadow"
+                  className="bg-gray-50 hover:bg-orange-50 rounded-lg p-4 flex items-center justify-center h-24 transition-colors duration-300 border border-gray-100 shadow-sm hover:shadow"
                 >
                   <div className="text-gray-700 font-semibold text-center">
                     {company}
@@ -564,7 +564,7 @@ const LandingPage = () => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a 
                     href="#contact" 
-                    className="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 shadow-md hover:shadow-lg"
+                    className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 shadow-md hover:shadow-lg"
                   >
                     Contact Insurance Team
                   </a>

@@ -137,13 +137,13 @@ const LandingPage = () => {
                 Expert repairs for all vehicle types with a commitment to quality and customer satisfaction.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up animation-delay-500">
-                <a href="#contact" className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 group">
+                <a href="#contact" className="bg-slate-700 hover:bg-slate-800 text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 group">
                   Schedule Repair
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 inline-block ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </a>
-                <a href="#services" className="border-2 border-white hover:border-teal-400 hover:text-teal-400 hover:bg-white/5 text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center backdrop-blur-sm">
+                <a href="#services" className="border-2 border-white hover:border-slate-300 hover:text-slate-300 hover:bg-white/5 text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center backdrop-blur-sm">
                   Our Services
                 </a>
               </div>
@@ -151,15 +151,15 @@ const LandingPage = () => {
               {/* Trust Indicators */}
               <div className="flex flex-wrap items-center mt-12 gap-8 animate-fade-in-up animation-delay-700">
                 <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <Shield className="text-teal-500 w-6 h-6 mr-3" />
+                  <Shield className="text-slate-400 w-6 h-6 mr-3" />
                   <span className="text-lg">Certified Technicians</span>
                 </div>
                 <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <CheckCircle className="text-teal-500 w-6 h-6 mr-3" />
+                  <CheckCircle className="text-slate-400 w-6 h-6 mr-3" />
                   <span className="text-lg">Quality Guaranteed</span>
                 </div>
                 <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <DollarSign className="text-teal-500 w-6 h-6 mr-3" />
+                  <DollarSign className="text-slate-400 w-6 h-6 mr-3" />
                   <span className="text-lg">All Insurance Accepted</span>
                 </div>
               </div>
@@ -167,7 +167,7 @@ const LandingPage = () => {
             
             {/* Right side decorative element */}
             <div className="hidden md:block relative">
-              <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-teal-500/30 to-teal-500/0 rounded-full filter blur-2xl opacity-70 animate-pulse"></div>
+              <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-slate-500/30 to-slate-500/0 rounded-full filter blur-2xl opacity-70 animate-pulse"></div>
               <div className="relative bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="text-white text-lg mb-4">10+ Years of Excellence</div>
                 <div className="grid grid-cols-2 gap-4">
@@ -190,7 +190,7 @@ const LandingPage = () => {
         
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce hidden md:block">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>

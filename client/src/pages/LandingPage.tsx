@@ -70,6 +70,7 @@ const LandingPage = () => {
   // Contact form submission
   const contactMutation = useMutation({
     mutationFn: (data: ContactFormValues) => {
+      console.log("Submitting contact form:", data);
       return apiRequest<{ success: boolean }>({
         url: '/api/contact',
         method: 'POST',
@@ -84,9 +85,12 @@ const LandingPage = () => {
       form.reset();
     },
     onError: (error) => {
+      console.error("Contact form submission error:", error);
       toast({
         title: "Error submitting form",
-        description: String(error),
+        description: typeof error === 'object' && error !== null && 'message' in error 
+          ? String(error.message) 
+          : "An unexpected error occurred. Please try again.",
         variant: "destructive",
       });
     }
@@ -94,6 +98,27 @@ const LandingPage = () => {
 
   // Form submission handler
   const onSubmit = (data: ContactFormValues) => {
+    console.log("Form values before submission:", data);
+    
+    // Validate that all required fields are present
+    if (!data.name || !data.email || !data.phone || !data.message || !data.vehicle || !data.service) {
+      console.error("Missing required fields:", { 
+        name: !!data.name, 
+        email: !!data.email,
+        phone: !!data.phone,
+        message: !!data.message,
+        vehicle: !!data.vehicle,
+        service: !!data.service
+      });
+      
+      toast({
+        title: "Missing required fields",
+        description: "Please fill in all required fields",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     contactMutation.mutate(data);
   };
 

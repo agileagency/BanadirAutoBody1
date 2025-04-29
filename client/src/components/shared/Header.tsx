@@ -50,15 +50,15 @@ const Header = () => {
         <div className="flex items-center">
           <a href="#home" className="flex items-center" onClick={closeMobileMenu}>
             <span className={`${scrolled ? 'text-xl' : 'text-2xl'} font-bold font-['Montserrat'] tracking-tight transition-all duration-300`}>
-              <span className="text-teal-600">BANADIR</span> AUTO BODY
+              <span className="text-orange-500">BANADIR</span> AUTO BODY
             </span>
           </a>
         </div>
 
         {/* Contact Info - Desktop */}
         <div className="hidden md:flex items-center mr-6">
-          <div className="bg-teal-600/20 px-4 py-2 rounded-full flex items-center">
-            <Phone className="text-teal-600 w-4 h-4 mr-2" />
+          <div className="bg-orange-500/20 px-4 py-2 rounded-full flex items-center">
+            <Phone className="text-orange-500 w-4 h-4 mr-2" />
             <span className="text-white font-semibold">(612) 555-1234</span>
           </div>
         </div>
@@ -67,7 +67,7 @@ const Header = () => {
         <div className="lg:hidden">
           <button 
             onClick={toggleMobileMenu} 
-            className="text-white bg-primary/80 hover:bg-teal-600/20 p-2 rounded-md focus:outline-none transition-colors"
+            className="text-white bg-primary/80 hover:bg-orange-500/20 p-2 rounded-md focus:outline-none transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -87,13 +87,13 @@ const Header = () => {
           {navItems.map((item) => (
             item.isButton ? (
               <a key={item.name} href={item.path} onClick={closeMobileMenu}>
-                <span className="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-md font-bold transition cursor-pointer inline-block shadow-md hover:shadow-lg">
+                <span className="bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 rounded-md font-bold transition cursor-pointer inline-block shadow-md hover:shadow-lg">
                   {item.name}
                 </span>
               </a>
             ) : (
               <a key={item.name} href={item.path} onClick={closeMobileMenu}>
-                <span className={`text-white hover:text-teal-400 font-semibold transition cursor-pointer relative after:absolute after:w-0 after:h-0.5 after:bg-teal-400 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all after:duration-300`}>
+                <span className={`text-white hover:text-orange-400 font-semibold transition cursor-pointer relative after:absolute after:w-0 after:h-0.5 after:bg-orange-400 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all after:duration-300`}>
                   {item.name}
                 </span>
               </a>
@@ -103,7 +103,7 @@ const Header = () => {
           {/* Admin Link */}
           <div className="border-l border-white/30 pl-4">
             <Link href={adminLink.path} onClick={closeMobileMenu}>
-              <span className="text-white/70 hover:text-teal-400 font-semibold transition cursor-pointer">
+              <span className="text-white/70 hover:text-orange-400 font-semibold transition cursor-pointer">
                 {adminLink.name}
               </span>
             </Link>
@@ -117,8 +117,8 @@ const Header = () => {
           {navItems.map((item) => (
             <a key={item.name} href={item.path} onClick={closeMobileMenu}>
               <span className={item.isButton 
-                ? "bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-md inline-block font-bold transition text-center w-full cursor-pointer shadow-md" 
-                : `text-white hover:text-teal-400 py-2 font-semibold transition cursor-pointer block border-b border-white/10 pb-2`}>
+                ? "bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 rounded-md inline-block font-bold transition text-center w-full cursor-pointer shadow-md" 
+                : `text-white hover:text-orange-400 py-2 font-semibold transition cursor-pointer block border-b border-white/10 pb-2`}>
                 {item.name}
               </span>
             </a>
@@ -127,7 +127,7 @@ const Header = () => {
           {/* Admin Link for Mobile */}
           <div className="pt-2">
             <Link href={adminLink.path} onClick={closeMobileMenu}>
-              <span className="text-white/70 hover:text-teal-400 py-2 font-semibold transition cursor-pointer block">
+              <span className="text-white/70 hover:text-orange-400 py-2 font-semibold transition cursor-pointer block">
                 {adminLink.name}
               </span>
             </Link>

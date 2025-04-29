@@ -172,11 +172,11 @@ const LandingPage = () => {
                 <div className="text-white text-lg mb-4">10+ Years of Excellence</div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-primary/40 p-4 rounded-lg text-center">
-                    <div className="text-3xl font-bold text-teal-400">2,500+</div>
+                    <div className="text-3xl font-bold text-slate-400">2,500+</div>
                     <div className="text-white/90 text-sm">Vehicles Repaired</div>
                   </div>
                   <div className="bg-primary/40 p-4 rounded-lg text-center">
-                    <div className="text-3xl font-bold text-teal-400">100%</div>
+                    <div className="text-3xl font-bold text-slate-400">100%</div>
                     <div className="text-white/90 text-sm">Satisfaction</div>
                   </div>
                   <div className="bg-primary/40 p-4 rounded-lg text-center col-span-2">
@@ -309,7 +309,7 @@ const LandingPage = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">Why Choose <span className="text-orange-400">Banadir Auto</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">Why Choose <span className="text-slate-400">Banadir Auto</span></h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               We're committed to providing exceptional service and quality repairs for every vehicle.
             </p>
@@ -318,7 +318,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {FEATURES.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 transition-transform duration-300 hover:scale-105">
-                <div className="text-orange-400 text-3xl mb-4">
+                <div className="text-slate-400 text-3xl mb-4">
                   {feature.icon === 'award' && <Award className="w-12 h-12" />}
                   {feature.icon === 'tools' && <Wrench className="w-12 h-12" />}
                   {feature.icon === 'shield' && <Shield className="w-12 h-12" />}
@@ -447,29 +447,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-20 bg-white" id="gallery">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">Our <span className="text-primary">Work</span></h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Take a look at some of our recent auto body repair projects.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {GALLERY_ITEMS.slice(0, 6).map((item, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md">
-                <img 
-                  src={item.image} 
-                  alt={item.title || `Gallery image ${index + 1}`} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Insurance Section */}
       <section className="py-24 bg-gradient-to-b from-gray-50 to-gray-100 relative overflow-hidden" id="insurance">
@@ -852,7 +830,7 @@ const LandingPage = () => {
                     <div className="pt-4">
                       <Button 
                         type="submit" 
-                        className="w-full bg-slate-700 hover:bg-slate-800 text-lg py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                        className="w-full bg-slate-600 hover:bg-slate-700 text-lg py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                         disabled={contactMutation.isPending}
                       >
                         {contactMutation.isPending ? (

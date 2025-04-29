@@ -316,10 +316,17 @@ const LandingPage = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-primary text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-primary text-white relative overflow-hidden">
+        {/* Orange decorative elements */}
+        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-orange-500/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-orange-500/20 rounded-full filter blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">Why Choose <span className="text-slate-400">Banadir Auto</span></h2>
+            <div className="inline-block bg-orange-500/20 backdrop-blur-sm px-4 py-1 rounded-full mb-6 border-l-4 border-orange-500">
+              <span className="text-orange-400 font-semibold">CUSTOMER EXPERIENCE</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] mb-4">Why Choose <span className="text-orange-400">Banadir Auto</span></h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               We're committed to providing exceptional service and quality repairs for every vehicle.
             </p>
@@ -327,8 +334,8 @@ const LandingPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {FEATURES.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 transition-transform duration-300 hover:scale-105">
-                <div className="text-slate-400 text-3xl mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 transition-transform duration-300 hover:scale-105 border-b-4 border-orange-500 group">
+                <div className="text-slate-400 group-hover:text-orange-400 transition-colors text-3xl mb-4">
                   {feature.icon === 'award' && <Award className="w-12 h-12" />}
                   {feature.icon === 'tools' && <Wrench className="w-12 h-12" />}
                   {feature.icon === 'shield' && <Shield className="w-12 h-12" />}
@@ -336,10 +343,22 @@ const LandingPage = () => {
                   {feature.icon === 'check' && <CheckCircle className="w-12 h-12" />}
                   {feature.icon === 'dollar' && <DollarSign className="w-12 h-12" />}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-orange-300 transition-colors">{feature.title}</h3>
                 <p className="opacity-90">{feature.description}</p>
               </div>
             ))}
+          </div>
+          
+          <div className="mt-16 text-center">
+            <a 
+              href="#contact" 
+              className="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+            >
+              Schedule Your Service
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -358,16 +377,21 @@ const LandingPage = () => {
           </svg>
         </div>
         
-        <div className="absolute top-10 right-10 w-40 h-40 bg-slate-500/20 rounded-full filter blur-3xl"></div>
+        {/* Orange decorative elements */}
+        <div className="absolute top-10 right-10 w-40 h-40 bg-orange-500/20 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-40 h-40 bg-slate-500/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-1/3 left-1/4 w-12 h-12 bg-orange-400/40 rounded-full"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-20 h-20 bg-orange-500/30 rounded-full"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 py-1 text-white font-medium mb-4">CUSTOMER TESTIMONIALS</div>
+            <div className="inline-block bg-orange-500/20 backdrop-blur-sm px-4 py-1 rounded-full mb-6 border-l-4 border-orange-500">
+              <span className="text-orange-400 font-semibold">CLIENT TESTIMONIALS</span>
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6 text-white">
-              What Our <span className="text-slate-400 relative inline-block">
+              What Our <span className="text-orange-400 relative inline-block">
                 Customers Say
-                <div className="absolute left-0 -bottom-2 w-full h-1 bg-slate-500/40"></div>
+                <div className="absolute left-0 -bottom-2 w-full h-1 bg-orange-500/40"></div>
               </span>
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -382,18 +406,18 @@ const LandingPage = () => {
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover-card-effect relative overflow-hidden group"
               >
                 {/* Quote mark decoration */}
-                <div className="absolute -top-2 -right-2 text-slate-500/20 text-9xl font-serif transform -rotate-6">❝</div>
+                <div className="absolute -top-2 -right-2 text-orange-500/20 text-9xl font-serif transform -rotate-6">❝</div>
                 
                 <div className="flex mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-slate-400 mx-0.5">★</span>
+                    <span key={i} className="text-orange-400 mx-0.5">★</span>
                   ))}
                 </div>
                 
                 <p className="text-white italic mb-8 relative z-10 leading-relaxed">"{testimonial.content}"</p>
                 
                 <div className="flex items-center relative z-10">
-                  <div className="w-14 h-14 bg-gray-300 rounded-full overflow-hidden mr-4 ring-2 ring-slate-500 ring-offset-2 ring-offset-primary">
+                  <div className="w-14 h-14 bg-gray-300 rounded-full overflow-hidden mr-4 ring-2 ring-orange-500 ring-offset-2 ring-offset-primary">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.author} 
@@ -402,17 +426,23 @@ const LandingPage = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white text-lg">{testimonial.author}</h4>
-                    <p className="text-slate-400">{testimonial.location}</p>
+                    <p className="text-orange-400">{testimonial.location}</p>
                   </div>
                 </div>
                 
                 {/* Hover effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800 opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-600/80 to-orange-800/80 opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
               </div>
             ))}
           </div>
           
-
+          {/* Read More Button */}
+          <div className="mt-12 text-center">
+            <button className="inline-flex items-center justify-center px-6 py-3 bg-orange-600/20 hover:bg-orange-600/30 text-white rounded-lg transition-colors group">
+              <span className="mr-2">Read More Testimonials</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </button>
+          </div>
         </div>
       </section>
 

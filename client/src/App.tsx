@@ -50,7 +50,7 @@ function App() {
         </Route>
         
         {/* Main header on main page only */}
-        <Route path="/" hook={(match) => match && match.path === '/'}>
+        <Route path="/">
           <Header />
         </Route>
         

@@ -130,7 +130,7 @@ const LandingPage = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gray-900 overflow-hidden flex items-center pt-24 pb-16" id="home">
+      <section className="relative min-h-screen bg-gray-900 overflow-hidden flex items-center pt-32 pb-16" id="home">
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -268,7 +268,7 @@ const LandingPage = () => {
                   {!service.icon && <CheckCircle className="w-8 h-8" />}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-primary mb-3">{service.name}</h3>
+                <h3 className="text-2xl font-bold text-primary mb-3 group-hover:text-orange-600 transition-colors">{service.name}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 
                 {/* Service features */}
@@ -288,7 +288,7 @@ const LandingPage = () => {
                 <div className="pt-4 border-t border-gray-100">
                   <a 
                     href="#contact" 
-                    className="inline-flex items-center text-slate-700 font-medium hover:text-slate-900 transition-colors"
+                    className="inline-flex items-center text-slate-700 font-medium hover:text-orange-600 transition-colors"
                   >
                     Request {service.name.toLowerCase()} service
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -304,7 +304,7 @@ const LandingPage = () => {
           <div className="mt-16 text-center">
             <a 
               href="#contact" 
-              className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-800 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+              className="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
               Request a Free Quote
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

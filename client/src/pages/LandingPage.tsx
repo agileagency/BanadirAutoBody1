@@ -348,16 +348,16 @@ const LandingPage = () => {
           </svg>
         </div>
         
-        <div className="absolute top-10 right-10 w-40 h-40 bg-orange-500/20 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-40 h-40 bg-orange-500/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-10 right-10 w-40 h-40 bg-slate-500/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-slate-500/20 rounded-full filter blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 py-1 text-white font-medium mb-4">CUSTOMER TESTIMONIALS</div>
             <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6 text-white">
-              What Our <span className="text-orange-400 relative inline-block">
+              What Our <span className="text-slate-400 relative inline-block">
                 Customers Say
-                <div className="absolute left-0 -bottom-2 w-full h-1 bg-orange-500/40"></div>
+                <div className="absolute left-0 -bottom-2 w-full h-1 bg-slate-500/40"></div>
               </span>
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -372,18 +372,18 @@ const LandingPage = () => {
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover-card-effect relative overflow-hidden group"
               >
                 {/* Quote mark decoration */}
-                <div className="absolute -top-2 -right-2 text-orange-500/20 text-9xl font-serif transform -rotate-6">❝</div>
+                <div className="absolute -top-2 -right-2 text-slate-500/20 text-9xl font-serif transform -rotate-6">❝</div>
                 
                 <div className="flex mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-orange-400 mx-0.5">★</span>
+                    <span key={i} className="text-slate-400 mx-0.5">★</span>
                   ))}
                 </div>
                 
                 <p className="text-white italic mb-8 relative z-10 leading-relaxed">"{testimonial.content}"</p>
                 
                 <div className="flex items-center relative z-10">
-                  <div className="w-14 h-14 bg-gray-300 rounded-full overflow-hidden mr-4 ring-2 ring-orange-500 ring-offset-2 ring-offset-primary">
+                  <div className="w-14 h-14 bg-gray-300 rounded-full overflow-hidden mr-4 ring-2 ring-slate-500 ring-offset-2 ring-offset-primary">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.author} 
@@ -392,7 +392,7 @@ const LandingPage = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white text-lg">{testimonial.author}</h4>
-                    <p className="text-orange-400">{testimonial.location}</p>
+                    <p className="text-slate-400">{testimonial.location}</p>
                   </div>
                 </div>
                 
@@ -402,48 +402,7 @@ const LandingPage = () => {
             ))}
           </div>
           
-          {/* Social proof */}
-          <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">4.9/5</div>
-                <div className="flex justify-center mb-1">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-orange-400 mx-0.5 text-lg">★</span>
-                  ))}
-                </div>
-                <p className="text-white/80">Google Reviews</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">5/5</div>
-                <div className="flex justify-center mb-1">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-orange-400 mx-0.5 text-lg">★</span>
-                  ))}
-                </div>
-                <p className="text-white/80">Facebook</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">4.8/5</div>
-                <div className="flex justify-center mb-1">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-orange-400 mx-0.5 text-lg">★</span>
-                  ))}
-                </div>
-                <p className="text-white/80">Yelp</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">A+</div>
-                <div className="flex justify-center mb-1">
-                  <span className="text-orange-400 font-bold">BBB</span>
-                </div>
-                <p className="text-white/80">Accredited Business</p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 

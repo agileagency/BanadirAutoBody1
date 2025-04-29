@@ -1,26 +1,9 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'wouter';
-import { Phone } from 'lucide-react';
+import { useState } from 'react';
+import { useLocation } from 'wouter';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrolled]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -34,33 +17,21 @@ const Header = () => {
   const navItems = [
     { name: 'Home', path: '#home' },
     { name: 'Services', path: '#services' },
-    { name: 'Gallery', path: '#gallery' },
     { name: 'Testimonials', path: '#testimonials' },
     { name: 'Insurance', path: '#insurance' },
     { name: 'Contact', path: '#contact', isButton: true }
   ];
-  
-  // Admin link - separate from main navigation
-  const adminLink = { name: 'Admin', path: '/admin' };
 
   return (
-    <header className={`${scrolled ? 'bg-primary/95 backdrop-blur-sm shadow-lg py-3' : 'bg-primary py-4'} text-white w-full fixed z-50 transition-all duration-300`}>
+    <header className="bg-primary py-4 text-white w-full z-50">
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
           <a href="#home" className="flex items-center" onClick={closeMobileMenu}>
-            <span className={`${scrolled ? 'text-xl' : 'text-2xl'} font-bold font-['Montserrat'] tracking-tight transition-all duration-300`}>
+            <span className="text-2xl font-bold font-['Montserrat'] tracking-tight">
               <span className="text-orange-500">BANADIR</span> AUTO BODY
             </span>
           </a>
-        </div>
-
-        {/* Contact Info - Desktop */}
-        <div className="hidden md:flex items-center mr-6">
-          <div className="bg-orange-500/20 px-4 py-2 rounded-full flex items-center">
-            <Phone className="text-orange-500 w-4 h-4 mr-2" />
-            <span className="text-white font-semibold">(612) 555-1234</span>
-          </div>
         </div>
         
         {/* Mobile Menu Button */}
@@ -99,15 +70,6 @@ const Header = () => {
               </a>
             )
           ))}
-          
-          {/* Admin Link */}
-          <div className="border-l border-white/30 pl-4">
-            <Link href={adminLink.path} onClick={closeMobileMenu}>
-              <span className="text-white/70 hover:text-orange-400 font-semibold transition cursor-pointer">
-                {adminLink.name}
-              </span>
-            </Link>
-          </div>
         </nav>
       </div>
       
@@ -123,15 +85,6 @@ const Header = () => {
               </span>
             </a>
           ))}
-          
-          {/* Admin Link for Mobile */}
-          <div className="pt-2">
-            <Link href={adminLink.path} onClick={closeMobileMenu}>
-              <span className="text-white/70 hover:text-orange-400 py-2 font-semibold transition cursor-pointer block">
-                {adminLink.name}
-              </span>
-            </Link>
-          </div>
         </div>
       </div>
     </header>

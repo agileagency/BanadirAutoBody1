@@ -259,57 +259,42 @@ const LandingPage = () => {
             {SERVICES.map((service, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover-card-effect group"
+                className="bg-white rounded-xl shadow-lg hover-card-effect group p-8 border border-gray-100"
               >
-                <div className="h-56 bg-gray-200 overflow-hidden relative">
-                  <img 
-                    src={service.image} 
-                    alt={service.name} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  {/* Hover action */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <a href="#contact" className="inline-flex items-center text-orange-500 font-semibold">
-                      Request Service
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
-                    </a>
-                  </div>
+                <div className="bg-slate-50 text-slate-600 p-4 rounded-lg inline-flex mb-6">
+                  {service.icon === 'car' && <Car className="w-8 h-8" />}
+                  {service.icon === 'wrench' && <Wrench className="w-8 h-8" />}
+                  {service.icon === 'shield' && <Shield className="w-8 h-8" />}
+                  {!service.icon && <CheckCircle className="w-8 h-8" />}
                 </div>
                 
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-3">{service.name}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  
-                  {/* Service features */}
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    <span className="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">
-                      Expert Technicians
-                    </span>
-                    <span className="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">
-                      Quality Materials
-                    </span>
-                    <span className="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">
-                      Warranty Coverage
-                    </span>
-                  </div>
-                  
-                  {/* Service action */}
-                  <div className="pt-4 border-t border-gray-100">
-                    <a 
-                      href="#contact" 
-                      className="inline-flex items-center text-primary font-medium hover:text-orange-600 transition-colors"
-                    >
-                      Learn more about {service.name.toLowerCase()}
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </a>
-                  </div>
+                <h3 className="text-2xl font-bold text-primary mb-3">{service.name}</h3>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                
+                {/* Service features */}
+                <div className="flex flex-wrap gap-2 mb-5">
+                  <span className="bg-slate-50 text-slate-700 text-sm px-3 py-1 rounded-full">
+                    Expert Technicians
+                  </span>
+                  <span className="bg-slate-50 text-slate-700 text-sm px-3 py-1 rounded-full">
+                    Quality Materials
+                  </span>
+                  <span className="bg-slate-50 text-slate-700 text-sm px-3 py-1 rounded-full">
+                    Warranty Coverage
+                  </span>
+                </div>
+                
+                {/* Service action */}
+                <div className="pt-4 border-t border-gray-100">
+                  <a 
+                    href="#contact" 
+                    className="inline-flex items-center text-slate-700 font-medium hover:text-slate-900 transition-colors"
+                  >
+                    Request {service.name.toLowerCase()} service
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             ))}
@@ -319,7 +304,7 @@ const LandingPage = () => {
           <div className="mt-16 text-center">
             <a 
               href="#contact" 
-              className="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+              className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-800 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
               Request a Free Quote
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

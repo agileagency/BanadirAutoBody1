@@ -59,7 +59,7 @@ const Footer = () => {
             <div className="mt-8">
               <h4 className="text-lg font-semibold mb-4 relative inline-block">
                 We Accept All Insurance
-                <div className="absolute left-0 -bottom-1 w-full h-0.5 bg-teal-500/40"></div>
+                <div className="absolute left-0 -bottom-1 w-full h-0.5 bg-orange-500/40"></div>
               </h4>
               <div className="flex flex-wrap gap-2 mt-3">
                 <span className="bg-white/10 text-white/90 text-xs px-3 py-1 rounded-full">
@@ -118,15 +118,15 @@ const Footer = () => {
             <div className="mt-12">
               <h3 className="text-xl font-bold mb-6 relative inline-block">
                 Business Hours
-                <div className="absolute left-0 -bottom-1 w-1/2 h-0.5 bg-teal-500/80"></div>
+                <div className="absolute left-0 -bottom-1 w-1/2 h-0.5 bg-orange-500/80"></div>
               </h3>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="flex items-start space-x-3 mb-3">
-                  <Clock className="w-5 h-5 text-teal-400 mt-1" />
+                  <Clock className="w-5 h-5 text-orange-400 mt-1" />
                   <div className="space-y-2 text-white/90">
                     <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
                     <p>Saturday: 9:00 AM - 4:00 PM</p>
-                    <p className="text-teal-400">Sunday: Closed</p>
+                    <p className="text-orange-400">Sunday: Closed</p>
                   </div>
                 </div>
               </div>
@@ -137,12 +137,12 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-6 relative inline-block">
               Contact Information
-              <div className="absolute left-0 -bottom-1 w-1/2 h-0.5 bg-teal-500/80"></div>
+              <div className="absolute left-0 -bottom-1 w-1/2 h-0.5 bg-orange-500/80"></div>
             </h3>
             <ul className="space-y-6">
               <li className="flex items-start">
                 <div className="bg-white/10 p-3 rounded-lg mr-4">
-                  <MapPin className="w-5 h-5 text-teal-400 mt-1" />
+                  <MapPin className="w-5 h-5 text-orange-400 mt-1" />
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Our Location</h4>
@@ -151,7 +151,7 @@ const Footer = () => {
                     href="https://maps.google.com/?q=3013+Pillsbury+Ave+Minneapolis+MN+55408" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="text-teal-400 text-sm flex items-center mt-2 hover:underline"
+                    className="text-orange-400 text-sm flex items-center mt-2 hover:underline"
                   >
                     Get Directions
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -162,14 +162,14 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <div className="bg-white/10 p-3 rounded-lg mr-4">
-                  <Phone className="w-5 h-5 text-teal-400" />
+                  <Phone className="w-5 h-5 text-orange-400" />
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Phone Number</h4>
                   <p className="text-white/80">(612) 555-1234</p>
                   <a 
                     href="tel:6125551234" 
-                    className="text-teal-400 text-sm flex items-center mt-2 hover:underline"
+                    className="text-orange-400 text-sm flex items-center mt-2 hover:underline"
                   >
                     Call Now
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -180,14 +180,14 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <div className="bg-white/10 p-3 rounded-lg mr-4">
-                  <Mail className="w-5 h-5 text-teal-400" />
+                  <Mail className="w-5 h-5 text-orange-400" />
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Email Address</h4>
                   <p className="text-white/80">info@banadirauto.com</p>
                   <a 
                     href="mailto:info@banadirauto.com" 
-                    className="text-teal-400 text-sm flex items-center mt-2 hover:underline"
+                    className="text-orange-400 text-sm flex items-center mt-2 hover:underline"
                   >
                     Send Email
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -207,9 +207,9 @@ const Footer = () => {
               &copy; {currentYear} Banadir Auto Body Shop. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-              <a href="#" className="text-white/70 text-sm hover:text-teal-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="text-white/70 text-sm hover:text-teal-400 transition-colors">Terms of Service</a>
-              <a href="#" className="text-white/70 text-sm hover:text-teal-400 transition-colors">Sitemap</a>
+              <a href="#" className="text-white/70 text-sm hover:text-orange-400 transition-colors">Privacy Policy</a>
+              <a href="#" className="text-white/70 text-sm hover:text-orange-400 transition-colors">Terms of Service</a>
+              <a href="#" className="text-white/70 text-sm hover:text-orange-400 transition-colors">Sitemap</a>
             </div>
           </div>
         </div>

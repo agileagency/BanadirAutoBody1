@@ -147,11 +147,11 @@ const LandingPage = () => {
         <div className="container mx-auto px-4 h-full flex items-center relative z-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white">
-              <div className="inline-block bg-teal-600/20 backdrop-blur-sm px-4 py-2 rounded-lg mb-6 border-l-4 border-teal-600 animate-fade-in-right">
-                <span className="text-teal-600 font-semibold">Minneapolis, MN</span>
+              <div className="inline-block bg-orange-600/20 backdrop-blur-sm px-4 py-2 rounded-lg mb-6 border-l-4 border-orange-600 animate-fade-in-right">
+                <span className="text-orange-400 font-semibold">Minneapolis, MN</span>
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-['Montserrat'] leading-tight mb-6 animate-fade-in-up">
-                Minneapolis' <span className="text-teal-600 inline-block relative">
+                Minneapolis' <span className="text-orange-400 inline-block relative">
                   Premier
                   <svg className="absolute -bottom-3 left-0 w-full" viewBox="0 0 100 12" width="100%" height="12">
                     <path d="M0,5 Q50,10 100,5 T200,5" fill="none" stroke="currentColor" strokeWidth="3" />
@@ -162,7 +162,7 @@ const LandingPage = () => {
                 Expert repairs for all vehicle types with a commitment to quality and customer satisfaction.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up animation-delay-500">
-                <a href="#contact" className="bg-slate-700 hover:bg-slate-800 text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 group">
+                <a href="#contact" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 group">
                   Schedule Repair
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 inline-block ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -243,11 +243,11 @@ const LandingPage = () => {
         
         <div className="container mx-auto px-4 relative">
           <div className="text-center mb-20">
-            <div className="inline-block bg-primary/10 rounded-full px-4 py-1 text-primary font-medium mb-4">PROFESSIONAL SERVICES</div>
+            <div className="inline-block bg-orange-500/20 rounded-full px-4 py-1 text-orange-600 font-medium mb-4">PROFESSIONAL SERVICES</div>
             <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] mb-6 text-shadow">
-              Our <span className="text-primary relative inline-block">
+              Our <span className="text-orange-600 relative inline-block">
                 Premium Services
-                <div className="absolute left-0 -bottom-2 w-full h-1 bg-[#D4AF37]/40"></div>
+                <div className="absolute left-0 -bottom-2 w-full h-1 bg-orange-400/40"></div>
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">

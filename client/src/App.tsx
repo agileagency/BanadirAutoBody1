@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Footer from "@/components/shared/Footer";
+import Header from "@/components/shared/Header";
 import Admin from "@/pages/Admin";
 import LandingPage from "@/pages/LandingPage";
 
@@ -16,11 +17,11 @@ const AdminHeader = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/">
           <span className="text-2xl font-bold font-['Montserrat'] tracking-tight cursor-pointer">
-            <span className="text-[#D4AF37]">BANADIR</span> AUTO BODY
+            <span className="text-orange-500">BANADIR</span> AUTO BODY
           </span>
         </Link>
         <Link href="/">
-          <span className="text-white hover:text-[#D4AF37] cursor-pointer">
+          <span className="text-white hover:text-orange-400 cursor-pointer">
             Back to Main Site
           </span>
         </Link>
@@ -46,6 +47,11 @@ function App() {
         {/* Custom routing for header */}
         <Route path="/admin">
           <AdminHeader />
+        </Route>
+        
+        {/* Main header on main page only */}
+        <Route path="/" hook={(match) => match && match.path === '/'}>
+          <Header />
         </Route>
         
         <main className="flex-grow">

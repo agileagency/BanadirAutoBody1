@@ -166,9 +166,9 @@ const Footer = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Phone Number</h4>
-                  <p className="text-white/80">(612) 555-1234</p>
+                  <p className="text-white/80">(612) 825-4563</p>
                   <a 
-                    href="tel:6125551234" 
+                    href="tel:6128254563" 
                     className="text-orange-400 text-sm flex items-center mt-2 hover:underline"
                   >
                     Call Now

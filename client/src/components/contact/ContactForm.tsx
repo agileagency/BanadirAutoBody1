@@ -102,7 +102,7 @@ const ContactForm = () => {
                 <FormLabel className="text-white">Phone Number</FormLabel>
                 <FormControl>
                   <Input 
-                    placeholder="(612) 555-1234" 
+                    placeholder="(612) 825-4563" 
                     {...field} 
                     className="bg-white/20 border border-white/30 rounded-md p-3 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" 
                   />

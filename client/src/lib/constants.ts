@@ -1,7 +1,7 @@
 // Company information
-export const COMPANY_NAME = "Banadir Main";
+export const COMPANY_NAME = "Banadir Auto";
 export const COMPANY_PHONE = "(612) 825-4563";
-export const COMPANY_EMAIL = "info@banadirmain.com";
+export const COMPANY_EMAIL = "info@banadirauto.com";
 export const COMPANY_ADDRESS = "3013 Pillsbury Ave, Minneapolis, MN 55408";
 export const COMPANY_FOUNDED = "2012";
 
@@ -128,7 +128,7 @@ export const GALLERY_ITEMS = [
 export const TESTIMONIALS = [
   {
     id: 1,
-    content: "After my accident, I was devastated about the damage to my car. Banadir Main not only restored my vehicle to its original condition, but they made the entire insurance process stress-free. Their attention to detail is impressive!",
+    content: "After my accident, I was devastated about the damage to my car. Banadir Auto not only restored my vehicle to its original condition, but they made the entire insurance process stress-free. Their attention to detail is impressive!",
     author: "Sarah Johnson",
     location: "Minneapolis, MN",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=80",
@@ -136,7 +136,7 @@ export const TESTIMONIALS = [
   },
   {
     id: 2,
-    content: "I've been taking my vehicles to Banadir for years and have always received exceptional service. Their technicians are knowledgeable, friendly, and they stand behind their work. I wouldn't trust my car with anyone else.",
+    content: "I've been taking my vehicles to Banadir Auto for years and have always received exceptional service. Their technicians are knowledgeable, friendly, and they stand behind their work. I wouldn't trust my car with anyone else.",
     author: "Michael Stevenson",
     location: "St. Paul, MN",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwcG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=80",
@@ -144,7 +144,7 @@ export const TESTIMONIALS = [
   },
   {
     id: 3,
-    content: "When my SUV was damaged in a hail storm, Banadir worked directly with my insurance company and made the entire process seamless. The quality of work exceeded my expectations and they finished ahead of schedule!",
+    content: "When my SUV was damaged in a hail storm, Banadir Auto worked directly with my insurance company and made the entire process seamless. The quality of work exceeded my expectations and they finished ahead of schedule!",
     author: "Jennifer Williams",
     location: "Eden Prairie, MN",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29tYW4lMjBwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=80",

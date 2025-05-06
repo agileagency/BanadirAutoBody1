@@ -223,7 +223,7 @@ export const STATS = [
     label: "Customer Satisfaction"
   },
   {
-    value: "15+",
+    value: "6+",
     label: "Certified Technicians"
   }
 ];

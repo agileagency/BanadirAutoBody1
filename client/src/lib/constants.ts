@@ -1,7 +1,7 @@
 // Company information
 export const COMPANY_NAME = "Banadir Auto";
 export const COMPANY_PHONE = "(612) 825-4563";
-export const COMPANY_EMAIL = "info@banadirauto.com";
+export const COMPANY_EMAIL = "info@bandadirautobody.com";
 export const COMPANY_ADDRESS = "3013 Pillsbury Ave, Minneapolis, MN 55408";
 export const COMPANY_FOUNDED = "2012";
 

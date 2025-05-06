@@ -182,9 +182,9 @@ const Footer = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Email Address</h4>
-                  <p className="text-white/80">info@banadirauto.com</p>
+                  <p className="text-white/80">info@bandadirautobody.com</p>
                   <a 
-                    href="mailto:info@banadirauto.com" 
+                    href="mailto:info@bandadirautobody.com" 
                     className="text-orange-400 text-sm flex items-center mt-2 hover:underline"
                   >
                     Send Email

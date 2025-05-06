@@ -7,9 +7,7 @@ export const COMPANY_FOUNDED = "2012";
 
 // Business hours
 export const BUSINESS_HOURS = {
-  weekdays: "Monday - Friday: 8:00 AM - 6:00 PM",
-  saturday: "Saturday: 9:00 AM - 4:00 PM",
-  sunday: "Sunday: Closed"
+  hours: "9:30 AM - 7:00 PM daily"
 };
 
 // Services offered

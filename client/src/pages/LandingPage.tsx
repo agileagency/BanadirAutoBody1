@@ -647,12 +647,8 @@ const LandingPage = () => {
                     </div>
                     <div>
                       <h4 className="font-bold mb-1 text-lg">Business Hours</h4>
-                      <div className="text-gray-700 space-y-1">
-                        {Object.entries(BUSINESS_HOURS).map(([day, hours], index) => (
-                          <p key={index} className={day === 'Monday' ? "font-medium" : ""}>
-                            <span className={day === 'Sunday' ? "text-orange-600" : ""}>{day}:</span> {hours}
-                          </p>
-                        ))}
+                      <div className="text-gray-700">
+                        <p className="font-medium text-orange-600">{BUSINESS_HOURS.hours}</p>
                       </div>
                     </div>
                   </div>

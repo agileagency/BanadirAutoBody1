@@ -227,7 +227,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {STATS.map((stat, index) => (
               <div key={index} className="p-4">
-                <p className="text-4xl font-bold text-primary mb-2">{stat.value}</p>
+                <p className="text-4xl font-bold text-orange-600 mb-2">{stat.value}</p>
                 <p className="text-gray-600">{stat.label}</p>
               </div>
             ))}
@@ -268,7 +268,7 @@ const LandingPage = () => {
                   {!service.icon && <CheckCircle className="w-8 h-8" />}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-primary mb-3 group-hover:text-orange-600 transition-colors">{service.name}</h3>
+                <h3 className="text-2xl font-bold text-slate-700 mb-3 group-hover:text-orange-600 transition-colors">{service.name}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 
                 {/* Service features */}
